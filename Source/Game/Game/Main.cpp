@@ -35,7 +35,8 @@ public:
 
 int main(int argc, char* argv[])
 {
-	
+	INFO_LOG;
+
 	kiko::MemoryTracker::Initialize();
 
 	kiko::seedRandom((unsigned int)time(nullptr));

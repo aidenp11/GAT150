@@ -44,7 +44,7 @@ void Player::OnCollision(Actor* other)
 
 		if (other->m_tag == "SpeedUp")
 		{
-			m_speed += 0.20f;
+			m_speed += 0.10f;
 		}
 		if (m_health == 0)
 		{
