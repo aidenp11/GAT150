@@ -1,6 +1,7 @@
 #include "Core/Core.h"
 #include "Renderer/Renderer.h"
 #include "Renderer/ModelManager.h"
+#include "Renderer/Texture.h"
 #include "Input/InputSystem.h"
 #include "Player.h"
 #include "Enemy.h"
@@ -35,7 +36,7 @@ public:
 
 int main(int argc, char* argv[])
 {
-	INFO_LOG;
+	INFO_LOG("program is running");
 
 	kiko::MemoryTracker::Initialize();
 
@@ -65,7 +66,8 @@ int main(int argc, char* argv[])
 		stars.push_back(Star(pos, vel));
 	}
 
-	
+	shared_ptr<kiko::Texture> texture = make_shared<kiko::Texture>();
+	texture->Create(kiko::g_renderer, "ship.txt");
 
 	bool quit = false;
 	while (!quit)
@@ -110,6 +112,7 @@ int main(int argc, char* argv[])
 
 		} 
 		game->Draw(kiko::g_renderer);
+		kiko::g_renderer.DrawTexture(texture.get(), 200.0f, 200.0f, 0.0f);
 		
 		kiko::g_renderer.EndFrame();
 	}
