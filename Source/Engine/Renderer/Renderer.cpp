@@ -48,7 +48,7 @@ namespace kiko
 			dest.w = size.x;
 			dest.h = size.y;
 			// https://wiki.libsdl.org/SDL2/SDL_RenderCopyEx
-			SDL_RenderCopyEx(renderer, texture->m_texture, NULL, NULL, angle, NULL, SDL_FLIP_HORIZONTAL );
+			SDL_RenderCopyEx(m_renderer, texture->m_texture, NULL, &dest, angle, NULL, SDL_FLIP_NONE );
 	}
 
 	void Renderer::BeginFrame()

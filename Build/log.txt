@@ -1,2 +1,1 @@
-INFO: Main.cpp(39) program is running
-ASSERT: Texture.cpp(31) texture cannot be null
+INFO: Main.cpp(42) program is running

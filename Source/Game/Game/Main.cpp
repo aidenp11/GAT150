@@ -13,6 +13,8 @@
 #include <iostream>
 #include <vector>
 #include <thread>
+#include <array>
+#include <map>
 
 using namespace std;
 
@@ -33,6 +35,7 @@ public:
 	kiko::Vector2 m_pos;
 	kiko::Vector2 m_vel;
 };
+
 
 int main(int argc, char* argv[])
 {
@@ -67,7 +70,7 @@ int main(int argc, char* argv[])
 	}
 
 	shared_ptr<kiko::Texture> texture = make_shared<kiko::Texture>();
-	texture->Create(kiko::g_renderer, "ship.txt");
+	texture->Load("playership.png", kiko::g_renderer);
 
 	bool quit = false;
 	while (!quit)
