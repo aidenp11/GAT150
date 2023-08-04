@@ -36,6 +36,14 @@ namespace kiko
 	}
 	bool Texture::Create(std::string filename, ...)
 	{
-		return false;
+		va_list args;
+
+		va_start(args, filename);
+
+		Renderer& renderer = va_arg(args, Renderer);
+
+		va_end(args);
+
+		return Load(filename, renderer);
 	}
 }

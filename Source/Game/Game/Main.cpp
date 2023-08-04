@@ -10,6 +10,7 @@
 #include "SpaceGame.h"
 #include "Framework/Emitter.h"
 #include "Renderer/ParticleSystem.h"
+#include "Framework/Resource/ResourceManager.h"
 #include <iostream>
 #include <vector>
 #include <thread>
@@ -35,7 +36,6 @@ public:
 	kiko::Vector2 m_pos;
 	kiko::Vector2 m_vel;
 };
-
 
 int main(int argc, char* argv[])
 {
@@ -69,8 +69,7 @@ int main(int argc, char* argv[])
 		stars.push_back(Star(pos, vel));
 	}
 
-	shared_ptr<kiko::Texture> texture = make_shared<kiko::Texture>();
-	texture->Load("playership.png", kiko::g_renderer);
+	kiko::res_t<kiko::Texture> texture = kiko::g_resourcem.Get<kiko::Texture>("playership.png", kiko::g_renderer);
 
 	bool quit = false;
 	while (!quit)

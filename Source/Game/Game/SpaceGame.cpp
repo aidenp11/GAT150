@@ -10,17 +10,19 @@
 #include "Renderer/Text.h"
 #include "Renderer/Font.h"
 #include "Framework/Emitter.h"
+#include "Framework/Resource/ResourceManager.h"
+#include "Framework/Components/SpriteComponent.h"
 #include "Renderer/ParticleSystem.h"
 #include "SpeedUp.h"
 
 
 bool SpaceGame::Initialize()
 {
-	m_font = std::make_shared<kiko::Font>("BodoniFLF-Bold.ttf", 24);
+	kiko::res_t<kiko::Font> font = kiko::g_resourcem.Get<kiko::Font>("BodoniFLF-Bold.ttf", 24);
 
-	m_scoreText = std::make_unique<kiko::Text>(m_font);
-	m_titleText = std::make_unique<kiko::Text>(m_font);
-	m_gameOverText = std::make_unique<kiko::Text>(m_font);
+	m_scoreText = std::make_unique<kiko::Text>(font);
+	m_titleText = std::make_unique<kiko::Text>(font);
+	m_gameOverText = std::make_unique<kiko::Text>(font);
 	
 	kiko::g_audioSystem.AddAudio("hit", "Laser_Shoot.wav");
 	kiko::g_audioSystem.AddAudio("explosion", "Explosion.wav");
@@ -63,6 +65,11 @@ void SpaceGame::Update(float dt)
 		std::unique_ptr<Player> player = std::make_unique<Player>(100.0f, kiko::pi, 500.0f, kiko::Transform{ { 400.0f, 300.0f }, 0.0f, 4.0f }, kiko::g_mmanager.Get("Ship.txt"));
 		player->m_tag = "Player";
 		player->m_game = this;
+
+		std::unique_ptr<kiko::SpriteComponent> component = std::make_unique<kiko::SpriteComponent>();
+		component->m_texture = kiko::g_resourcem.Get<kiko::Texture>("playership.png", kiko::g_renderer);
+		player->AddComponent(std::move(component));
+
 		m_scene->Add(std::move(player));
 
 		m_state = eState::Game;
