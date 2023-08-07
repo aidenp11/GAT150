@@ -10,6 +10,11 @@ namespace kiko
 			m_lifespan -= dt;
 			m_destroyed = (m_lifespan <= 0);
 		}
+
+		for (auto& component : m_components)
+		{
+			component->Update(dt);
+		}
 	}
 
 	void Actor::Draw(kiko::Renderer& renderer)

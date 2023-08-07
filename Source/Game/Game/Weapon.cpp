@@ -12,8 +12,8 @@ void Weapon::Update(float dt)
 
 void Weapon::OnCollision(Actor* other)
 {
-	if (other->m_tag == m_tag)
+	/*if (other->m_tag != m_tag)
 	{
 		m_destroyed = true;
-	}
+	}*/
 }

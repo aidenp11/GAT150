@@ -69,8 +69,6 @@ int main(int argc, char* argv[])
 		stars.push_back(Star(pos, vel));
 	}
 
-	kiko::res_t<kiko::Texture> texture = kiko::g_resourcem.Get<kiko::Texture>("playership.png", kiko::g_renderer);
-
 	bool quit = false;
 	while (!quit)
 	{
@@ -114,7 +112,6 @@ int main(int argc, char* argv[])
 
 		} 
 		game->Draw(kiko::g_renderer);
-		kiko::g_renderer.DrawTexture(texture.get(), 200.0f, 200.0f, 0.0f);
 		
 		kiko::g_renderer.EndFrame();
 	}

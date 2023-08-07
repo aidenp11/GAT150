@@ -1,4 +1,7 @@
 C:\Users\apatrick\source\repos\GAT150\Source\Engine\Framework\Actor.cpp
+C:\Users\apatrick\source\repos\GAT150\Source\Engine\Framework\Components\EnginePhysicsComponent.cpp
+C:\Users\apatrick\source\repos\GAT150\Source\Engine\Framework\Components\ModelRenderComponent.cpp
+C:\Users\apatrick\source\repos\GAT150\Source\Engine\Framework\Components\PhysicsComponent.cpp
 C:\Users\apatrick\source\repos\GAT150\Source\Engine\Framework\Components\SpriteComponent.cpp
 C:\Users\apatrick\source\repos\GAT150\Source\Engine\Framework\Emitter.cpp
 C:\Users\apatrick\source\repos\GAT150\Source\Engine\Framework\Resource\ResourceManager.cpp

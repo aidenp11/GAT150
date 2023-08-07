@@ -5,6 +5,10 @@
 #include "Framework/Scene.h"
 #include "SpaceGame.h"
 #include "Audio/AudioSystem.h"
+#include "Framework/Components/SpriteComponent.h"
+#include "Framework/Resource/ResourceManager.h"
+#include "Framework/Components/PhysicsComponent.h"
+#include "Renderer/Texture.h"
 
 void Player::Update(float dt)
 {
@@ -23,12 +27,20 @@ void Player::Update(float dt)
 	m_transform.position.x = kiko::Wrap(m_transform.position.x, (float)kiko::g_renderer.GetWidth());
 	m_transform.position.y = kiko::Wrap(m_transform.position.y, (float)kiko::g_renderer.GetHeight());
 
+	auto physicsComponent = GetComponent<kiko::PhysicsComponent>();
+	physicsComponent->ApplyForce(forward * m_speed * thrust);
+
 
 	if (kiko::g_inputSystem.GetKeyDown(SDL_SCANCODE_SPACE) &&
 		!kiko::g_inputSystem.GetPreviousKeyDown(SDL_SCANCODE_SPACE))
 	{
 		kiko::Transform transform { m_transform.position, m_transform.rotation, 0.3f };
-		std::unique_ptr<Weapon> weapon = std::make_unique<Weapon>( 500.0f, transform, m_model );
+
+		std::unique_ptr<Weapon> weapon = std::make_unique<Weapon>( 500.0f, transform );
+		std::unique_ptr<kiko::SpriteComponent> component = std::make_unique<kiko::SpriteComponent>();
+		component->m_texture = kiko::g_resourcem.Get<kiko::Texture>("rocket.png", kiko::g_renderer);
+		weapon->AddComponent(std::move(component));
+
 		weapon->m_tag = "PlayerBullet";
 		m_scene->Add(std::move(weapon));
 	}

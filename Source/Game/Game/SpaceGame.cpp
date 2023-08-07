@@ -12,6 +12,7 @@
 #include "Framework/Emitter.h"
 #include "Framework/Resource/ResourceManager.h"
 #include "Framework/Components/SpriteComponent.h"
+#include "Framework/Components/EnginePhysicsComponent.h"
 #include "Renderer/ParticleSystem.h"
 #include "SpeedUp.h"
 
@@ -62,13 +63,17 @@ void SpaceGame::Update(float dt)
 	{
 		m_scene->RemoveAll();
 
-		std::unique_ptr<Player> player = std::make_unique<Player>(100.0f, kiko::pi, 500.0f, kiko::Transform{ { 400.0f, 300.0f }, 0.0f, 4.0f }, kiko::g_mmanager.Get("Ship.txt"));
+		std::unique_ptr<Player> player = std::make_unique<Player>(100.0f, kiko::pi, 500.0f, kiko::Transform{ { 400.0f, 300.0f }, 0.0f, 4.0f });
 		player->m_tag = "Player";
 		player->m_game = this;
 
 		std::unique_ptr<kiko::SpriteComponent> component = std::make_unique<kiko::SpriteComponent>();
 		component->m_texture = kiko::g_resourcem.Get<kiko::Texture>("playership.png", kiko::g_renderer);
 		player->AddComponent(std::move(component));
+
+		auto physicsComponent = std::make_unique<kiko::EnginePhysicsComponet>();
+		physicsComponent->m_damping = 1.0f;
+		player->AddComponent(std::move(physicsComponent));
 
 		m_scene->Add(std::move(player));
 
@@ -80,16 +85,21 @@ void SpaceGame::Update(float dt)
 		if (m_spawnTimer >= m_spawnTime)
 		{
 			m_spawnTimer = 0;
-			std::unique_ptr<Enemy> enemy = std::make_unique<Enemy>(kiko::randomf(25.0f, 50.0f), kiko::pi, kiko::randomf(50.0f, 200.0f), kiko::Transform{ { kiko::randomf(600.0f), kiko::randomf(400.0f) }, kiko::randomf(kiko::pi), 3.0f}, kiko::g_mmanager.Get("EnemyShip.txt"));
+			std::unique_ptr<Enemy> enemy = std::make_unique<Enemy>(kiko::randomf(25.0f, 50.0f), kiko::pi, kiko::randomf(50.0f, 200.0f), kiko::Transform{ { kiko::randomf(600.0f), kiko::randomf(400.0f) }, kiko::randomf(kiko::pi), 3.0f});
 			enemy->m_tag = "Enemy";
 			enemy->m_game = this;
+
+			std::unique_ptr<kiko::SpriteComponent> component = std::make_unique<kiko::SpriteComponent>();
+			component->m_texture = kiko::g_resourcem.Get<kiko::Texture>("enemyship.png", kiko::g_renderer);
+			enemy->AddComponent(std::move(component));
+
 			m_scene->Add(std::move(enemy));
 			spawnAmount++;
 
 		} 
 		if (spawnAmount == 3)
 		{
-			std::unique_ptr<SpeedUp> speedUp = std::make_unique<SpeedUp>(10.0f, kiko::randomf(25.0f, 50.0f), kiko::Transform{ { kiko::randomf(600.0f), kiko::randomf(400.0f) }, kiko::randomf(kiko::pi), 3.0f}, kiko::g_mmanager.Get("SpeedUp.txt"));
+			std::unique_ptr<SpeedUp> speedUp = std::make_unique<SpeedUp>(10.0f, kiko::randomf(25.0f, 50.0f), kiko::Transform{ { kiko::randomf(600.0f), kiko::randomf(400.0f) }, kiko::randomf(kiko::pi), 3.0f});
 			speedUp->m_tag = "SpeedUp";
 			speedUp->m_game = this;
 			m_scene->Add(std::move(speedUp));
