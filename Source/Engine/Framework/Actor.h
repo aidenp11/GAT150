@@ -24,7 +24,7 @@ namespace kiko
 		template<typename T>
 		T* GetComponent();
 
-		float GetRadius() { return 30.0f; }
+		float GetRadius() { return 7.5f; }
 
 		virtual void OnCollision(Actor* other) {}
 

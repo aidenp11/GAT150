@@ -1,10 +1,11 @@
 #pragma once
 #include "Core/Core.h"
-#include "Renderer.h"
 #include <vector>
 
 namespace kiko 
 {
+	class Renderer;
+
 	class Model
 	{
 	public:
