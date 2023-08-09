@@ -1,6 +1,6 @@
 #pragma once
 #include "Component.h"
-#include "Core/Math/Vector.h"
+#include "Core/Vector.h"
 
 namespace kiko
 {

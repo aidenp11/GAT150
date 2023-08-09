@@ -1,5 +1,5 @@
 #include "Time.h"
-#include "Math/MathUtils.h"
+#include "MathUtils.h"
 
 namespace kiko
 {

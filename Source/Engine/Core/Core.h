@@ -6,7 +6,7 @@
 #include "Memory.h"
 #include "Time.h"
 
-#include "Math/Vector.h"
-#include "Math/Transform.h"
-#include "Math/MathUtils.h"
-#include "Math/Color.h"
+#include "Vector.h"
+#include "Transform.h"
+#include "MathUtils.h"
+#include "Color.h"

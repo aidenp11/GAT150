@@ -60,5 +60,17 @@ namespace kiko
 		
 		return m_radius;
 	}
+
+	bool Model::Create(std::string filename, ...)
+	{
+		std::string buffer;
+		if (!kiko::readFile(filename, buffer))
+		{
+			WARNING_LOG("Could not load model: " << filename);
+			return false;
+		}
+
+		return true;
+	}
 }
 
