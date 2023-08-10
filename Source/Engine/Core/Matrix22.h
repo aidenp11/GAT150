@@ -1,5 +1,4 @@
 #pragma once
-
 #include "Vector.h"
 
 namespace kiko
@@ -34,6 +33,9 @@ namespace kiko
 
 	inline vec2 Matrix22::operator*(const vec2& v)
 	{
+		// | a b |   | x |
+		// | c d | * | y |
+
 		vec2 result;
 		result.x = rows[0][0] * v.x + rows[0][1] * v.y;
 		result.y = rows[1][0] * v.x + rows[1][1] * v.y;
@@ -43,8 +45,14 @@ namespace kiko
 
 	inline Matrix22 Matrix22::operator*(const Matrix22& mx)
 	{
+		// | a b |   | e f |
+		// | c d | * | g h |
+
 		Matrix22 result;
-		result[0][0] = rows[0][0] * mx[0][0] + rows[0][1] + mx[1][0];
+		result[0][0] = rows[0][0] * mx[0][0] + rows[0][1] * mx[1][0];
+		result[0][1] = rows[0][0] * mx[0][1] + rows[0][1] * mx[1][1];
+		result[1][0] = rows[1][0] * mx[0][0] + rows[1][1] * mx[1][0];
+		result[1][1] = rows[1][0] * mx[0][1] + rows[1][1] * mx[1][1];
 
 		return result;
 	}
@@ -66,13 +74,25 @@ namespace kiko
 			{ 0.0f, scale.y }
 		};
 	}
-	
+
 	inline Matrix22 Matrix22::CreateScale(float scale)
 	{
 		return
 		{
 			{ scale, 0.0f },
 			{ 0.0f, scale }
+		};
+	}
+
+	inline Matrix22 Matrix22::CreateRotation(float radians)
+	{
+		float c = cos(radians);
+		float s = sin(radians);
+
+		return
+		{
+			{ c, -s },
+			{ s,  c }
 		};
 	}
 
