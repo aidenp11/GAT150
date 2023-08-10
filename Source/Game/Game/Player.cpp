@@ -34,7 +34,7 @@ void Player::Update(float dt)
 	if (kiko::g_inputSystem.GetKeyDown(SDL_SCANCODE_SPACE) &&
 		!kiko::g_inputSystem.GetPreviousKeyDown(SDL_SCANCODE_SPACE))
 	{
-		kiko::Transform transform { m_transform.position, m_transform.rotation, 0.3f };
+		kiko::Transform transform { m_transform.position - 10, m_transform.rotation, 0.5f };
 
 		std::unique_ptr<Weapon> weapon = std::make_unique<Weapon>( 500.0f, transform );
 		std::unique_ptr<kiko::SpriteComponent> component = std::make_unique<kiko::SpriteComponent>();

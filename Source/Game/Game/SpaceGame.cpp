@@ -54,7 +54,7 @@ void SpaceGame::Update(float dt)
 	{
 		m_scene->RemoveAll();
 
-		std::unique_ptr<Player> player = std::make_unique<Player>(100.0f, kiko::pi, 500.0f, kiko::Transform{ { 400.0f, 300.0f }, 0.0f, 4.0f });
+		std::unique_ptr<Player> player = std::make_unique<Player>(100.0f, kiko::pi, 500.0f, kiko::Transform{ { 400.0f, 300.0f }, 0.0f, 1.0f });
 		player->m_tag = "Player";
 		player->m_game = this;
 
@@ -76,7 +76,7 @@ void SpaceGame::Update(float dt)
 		if (m_spawnTimer >= m_spawnTime)
 		{
 			m_spawnTimer = 0;
-			std::unique_ptr<Enemy> enemy = std::make_unique<Enemy>(kiko::randomf(25.0f, 50.0f), kiko::pi, kiko::randomf(50.0f, 200.0f), kiko::Transform{ { kiko::randomf(600.0f), kiko::randomf(400.0f) }, kiko::randomf(kiko::pi), 3.0f});
+			std::unique_ptr<Enemy> enemy = std::make_unique<Enemy>(kiko::randomf(25.0f, 50.0f), kiko::pi, kiko::randomf(50.0f, 200.0f), kiko::Transform{ { kiko::randomf(600.0f), kiko::randomf(400.0f) }, kiko::randomf(kiko::pi), 1.0f});
 			enemy->m_tag = "Enemy";
 			enemy->m_game = this;
 
