@@ -1,4 +1,5 @@
 #include "Scene.h"
+#include "Components/CollisionComponent.h"
 
 namespace kiko
 {
@@ -24,10 +25,12 @@ namespace kiko
 		{
 			for (auto iter2 = std::next(iter1, 1); iter2 != m_actors.end(); iter2++)
 			{
-				float distance = (*iter1)->m_transform.position.distance((*iter2)->m_transform.position);
-				float radius = (*iter1)->GetRadius() * (*iter2)->GetRadius();
+				CollisionComponent* collisoin1 = (*iter1)->GetComponent<CollisionComponent>();
+				CollisionComponent* collisoin2 = (*iter2)->GetComponent<CollisionComponent>();
 
-				if (distance < radius)
+				if (collisoin1 == nullptr || collisoin2 == nullptr) continue;
+
+				if (collisoin1->CheckCollide(collisoin2))
 				{
 					(*iter1)->OnCollision(iter2->get());
 					(*iter2)->OnCollision(iter1->get());
