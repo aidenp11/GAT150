@@ -5,6 +5,7 @@
 #include "Emitter.h"
 #include "Game.h"
 #include "Scene.h"
+#include "Factory.h"
 
 #include "Components/Component.h"
 #include "Components/EnginePhysicsComponent.h"

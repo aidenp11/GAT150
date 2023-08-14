@@ -153,6 +153,7 @@
     <ClInclude Include="Color.h" />
     <ClInclude Include="Core.h" />
     <ClInclude Include="FileIO.h" />
+    <ClInclude Include="json.h" />
     <ClInclude Include="Logger.h" />
     <ClInclude Include="MathUtils.h" />
     <ClInclude Include="Matrix22.h" />
@@ -166,6 +167,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FileIO.cpp" />
+    <ClCompile Include="json.cpp" />
     <ClCompile Include="Logger.cpp" />
     <ClCompile Include="Memory.cpp" />
     <ClCompile Include="Time.cpp" />
