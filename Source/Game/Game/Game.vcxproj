@@ -151,7 +151,7 @@
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="SpaceGame.cpp" />
     <ClCompile Include="SpeedUp.cpp" />
-    <ClCompile Include="Weapon.cpp" />
+    <ClCompile Include="WeaponComponent.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Engine\Audio\Audio.vcxproj">
@@ -175,7 +175,7 @@
     <ClInclude Include="Player.h" />
     <ClInclude Include="SpaceGame.h" />
     <ClInclude Include="SpeedUp.h" />
-    <ClInclude Include="Weapon.h" />
+    <ClInclude Include="WeaponComponent.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

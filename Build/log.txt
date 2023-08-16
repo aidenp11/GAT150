@@ -1,5 +1,7 @@
-INFO: Factory.h(52) Class registered: SpriteComponent
-INFO: Factory.h(52) Class registered: EnginePhysicsComponet
-INFO: Factory.h(52) Class registered: CircleCollisionComponent
-INFO: Factory.h(52) Class registered: Actor
+INFO: Factory.h(53) Class registered: SpriteComponent
+INFO: Factory.h(53) Class registered: ModelRenderComponent
+INFO: Factory.h(53) Class registered: EnginePhysicsComponet
+INFO: Factory.h(53) Class registered: CircleCollisionComponent
+INFO: Factory.h(53) Class registered: Actor
 INFO: Main.cpp(43) program is running
+ASSERT: Texture.cpp(31) texture cannot be null

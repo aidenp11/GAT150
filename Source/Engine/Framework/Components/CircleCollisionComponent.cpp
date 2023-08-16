@@ -11,7 +11,7 @@ namespace kiko
 
     bool CircleCollisionComponent::CheckCollide(CollisionComponent* collision)
     {
-        float distance = m_owner->m_transform.position.distance(collision->m_owner->m_transform.position);
+        float distance = m_owner->transformg.position.distance(collision->m_owner->transformg.position);
         float radius = m_radius + collision->m_radius;
         
         if (distance <= radius) return true;

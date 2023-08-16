@@ -15,7 +15,7 @@ namespace kiko
 		Actor() = default;
 
 		Actor(const kiko::Transform& transform) :
-			m_transform{ transform }
+			transformg{ transform }
 		{}
 
 		virtual bool Initialize() override;
@@ -42,22 +42,23 @@ namespace kiko
 
 		float m_lifespan = -1.0f;
 
-		kiko::Transform m_transform;
+	public:
+		Transform transformg;
 		inline float Wrap(float value, float max)
 		{
 			return std::fmod(value, max) + ((value < 0) ? max : 0);
 		}
-		std::string m_tag;
+		std::string tag;
 
 	protected:
-		std::vector<std::unique_ptr<Component>> m_components;
+		std::vector<std::unique_ptr<Component>> components;
 		bool m_destroyed = false;
 	};
 
 	template<typename T>
 	inline T* Actor::GetComponent()
 	{
-		for (auto& component : m_components)
+		for (auto& component : components)
 		{
 			T* result = dynamic_cast<T*>(component.get());
 			if (result) return result;

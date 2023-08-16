@@ -1,6 +1,6 @@
 #include "Enemy.h"
 #include "Player.h"
-#include "Weapon.h"
+#include "WeaponComponent.h"
 #include "Renderer/Renderer.h"
 #include "Framework/Framework.h"
 #include "SpaceGame.h"
@@ -16,7 +16,7 @@ bool Enemy::Initialize()
 		auto renderComponent = GetComponent<kiko::RenderComponent>();
 		if (renderComponent)
 		{
-			float scale = m_transform.scale;
+			float scale = transformg.scale;
 			collisionComponent->m_radius = renderComponent->GetRadius() * scale;
 		}
 	}
@@ -31,21 +31,21 @@ void Enemy::Update(float dt)
 	Player* player = m_scene->GetActor<Player>();
 	if (player)
 	{
-		kiko::Vector2 direction = player->m_transform.position - m_transform.position;
-		m_transform.rotation = direction.Angle() + kiko::halfpi;
+		kiko::Vector2 direction = player->transformg.position - transformg.position;
+		transformg.rotation = direction.Angle() + kiko::halfpi;
 	}
 
-	kiko::vec2 forward = kiko::vec2{ 0, -1 }.Rotate(m_transform.rotation);
-	m_transform.position += forward * m_speed * kiko::g_time.GetDeltaTime();
-	m_transform.position.x = kiko::Wrap(m_transform.position.x, (float)kiko::g_renderer.GetWidth());
-	m_transform.position.y = kiko::Wrap(m_transform.position.y, (float)kiko::g_renderer.GetHeight());
+	kiko::vec2 forward = kiko::vec2{ 0, -1 }.Rotate(transformg.rotation);
+	transformg.position += forward * m_speed * kiko::g_time.GetDeltaTime();
+	transformg.position.x = kiko::Wrap(transformg.position.x, (float)kiko::g_renderer.GetWidth());
+	transformg.position.y = kiko::Wrap(transformg.position.y, (float)kiko::g_renderer.GetHeight());
 
 	m_fireTimer -= dt;
 	if (m_fireTimer <= 0)
 	{
-		kiko::Transform transform { m_transform.position, m_transform.rotation, 0.3f };
-		std::unique_ptr<Weapon> weapon = std::make_unique<Weapon>(200.0f, transform);
-		weapon->m_tag = "EnemyBullet";
+		kiko::Transform transform { transformg.position, transformg.rotation, 0.3f };
+		std::unique_ptr<Weapon> weapon = std::make_unique<Weapon>(200.0f, transformg);
+		weapon->tag = "EnemyBullet";
 		m_scene->Add(std::move(weapon));
 		m_fireTimer = m_fireRate;
 	}
@@ -53,7 +53,7 @@ void Enemy::Update(float dt)
 
 void Enemy::OnCollision(Actor* other)
 {
-	if (other->m_tag == "PlayerBullet")
+	if (other->tag == "PlayerBullet")
 	{
 		m_health -= 1;
 	}

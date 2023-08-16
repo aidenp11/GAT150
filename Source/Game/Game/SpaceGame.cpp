@@ -55,7 +55,7 @@ void SpaceGame::Update(float dt)
 		m_scene->RemoveAll();
 
 		std::unique_ptr<Player> player = std::make_unique<Player>(100.0f, kiko::pi, 500.0f, kiko::Transform{ { 400.0f, 300.0f }, 0.0f, 1.0f });
-		player->m_tag = "Player";
+		player->tag = "Player";
 		player->m_game = this;
 
 		// auto spriteComponent = CREATE_CLASS(SpriteComponent)
@@ -84,7 +84,7 @@ void SpaceGame::Update(float dt)
 		{
 			m_spawnTimer = 0;
 			std::unique_ptr<Enemy> enemy = std::make_unique<Enemy>(kiko::randomf(25.0f, 50.0f), kiko::pi, kiko::randomf(50.0f, 200.0f), kiko::Transform{ { kiko::randomf(600.0f), kiko::randomf(400.0f) }, kiko::randomf(kiko::pi), 1.0f});
-			enemy->m_tag = "Enemy";
+			enemy->tag = "Enemy";
 			enemy->m_game = this;
 
 			std::unique_ptr<kiko::SpriteComponent> component = std::make_unique<kiko::SpriteComponent>();
@@ -102,7 +102,7 @@ void SpaceGame::Update(float dt)
 		if (spawnAmount == 3)
 		{
 			std::unique_ptr<SpeedUp> speedUp = std::make_unique<SpeedUp>(10.0f, kiko::randomf(25.0f, 50.0f), kiko::Transform{ { kiko::randomf(600.0f), kiko::randomf(400.0f) }, kiko::randomf(kiko::pi), 3.0f});
-			speedUp->m_tag = "SpeedUp";
+			speedUp->tag = "SpeedUp";
 			speedUp->m_game = this;
 			m_scene->Add(std::move(speedUp));
 			spawnAmount = 0;
