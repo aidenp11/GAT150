@@ -12,6 +12,5 @@ namespace kiko
 
 	public:
 		class Actor* m_owner = nullptr;
-
 	};
 }

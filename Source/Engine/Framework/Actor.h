@@ -1,6 +1,6 @@
 #pragma once
 #include "Object.h"
-#include "Core/Core.h"
+
 #include "Renderer/Model.h"
 #include "Components/Component.h"
 #include <memory>
@@ -10,6 +10,8 @@ namespace kiko
 	class Actor : public Object
 	{
 	public:
+		CLASS_DECLARATION(Actor)
+
 		Actor() = default;
 
 		Actor(const kiko::Transform& transform) :

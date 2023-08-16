@@ -12,6 +12,7 @@ namespace kiko
 		float scale = 1;
 
 	public:
+		Transform() = default;
 		Transform(const vec2& position, float rotation, float scale = 1) :
 			position{ position },
 			rotation{ rotation },

@@ -58,6 +58,8 @@ void SpaceGame::Update(float dt)
 		player->m_tag = "Player";
 		player->m_game = this;
 
+		// auto spriteComponent = CREATE_CLASS(SpriteComponent)
+
 		std::unique_ptr<kiko::SpriteComponent> component = std::make_unique<kiko::SpriteComponent>();
 		component->m_texture = GET_RESOURCE(kiko::Texture, "playership.png", kiko::g_renderer);
 		player->AddComponent(std::move(component));

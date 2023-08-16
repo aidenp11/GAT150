@@ -40,8 +40,6 @@ inline std::ostream& operator<<(std::ostream& stream, const kiko::Vector2& v)
 
 int main(int argc, char* argv[])
 {
-	//kiko::Factory::Instance().Register<kiko::SpriteComponent>("SpriteComponent");
-
 	INFO_LOG("program is running");
 
 	kiko::MemoryTracker::Initialize();

@@ -1,1 +1,5 @@
-INFO: Main.cpp(45) program is running
+INFO: Factory.h(52) Class registered: SpriteComponent
+INFO: Factory.h(52) Class registered: EnginePhysicsComponet
+INFO: Factory.h(52) Class registered: CircleCollisionComponent
+INFO: Factory.h(52) Class registered: Actor
+INFO: Main.cpp(43) program is running
