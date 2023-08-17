@@ -4,4 +4,3 @@ INFO: Factory.h(53) Class registered: EnginePhysicsComponet
 INFO: Factory.h(53) Class registered: CircleCollisionComponent
 INFO: Factory.h(53) Class registered: Actor
 INFO: Main.cpp(43) program is running
-ASSERT: Texture.cpp(31) texture cannot be null

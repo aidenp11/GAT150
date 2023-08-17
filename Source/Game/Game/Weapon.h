@@ -1,9 +1,9 @@
 #pragma once
-#include "Framework/Components/Component.h"
+#include "Framework/Actor.h"
 
 namespace kiko
 {
-	class WeaponComponent : public Component
+	class Weapon : public Actor
 	{
 	public:
 		//Weapon(float speed, const kiko::Transform& transform) :
@@ -22,7 +22,7 @@ namespace kiko
 		float speed = 0;
 	public:
 
-		WeaponComponent() = default;
+		Weapon() = default;
 	};
 }
 

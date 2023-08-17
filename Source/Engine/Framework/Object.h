@@ -4,8 +4,8 @@
 #include <string>
 
 #define CLASS_DECLARATION(classname) \
-	const char* GetClassName() { return #classname; } \
-	void Read(const json_t& value); \
+	virtual const char* GetClassName() { return #classname; } \
+	virtual void Read(const json_t& value); \
 	class Register \
 		{ \
 		public: \

@@ -21,6 +21,8 @@ bool SpaceGame::Initialize()
 	kiko::g_audioSystem.AddAudio("music", "spacesong.wav");
 
 	m_scene = std::make_unique<kiko::Scene>();
+	m_scene->Load("scene.json");
+	m_scene->Initialize();
 
 	m_scoreText->Create(kiko::g_renderer, "SCORE: 00000", kiko::Color{ 0, 0, 0, 0 } );
 	m_titleText->Create(kiko::g_renderer, "SPACE GAME!", kiko::Color{ 1, 1, 1, 1 } );

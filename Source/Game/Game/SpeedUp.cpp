@@ -1,6 +1,6 @@
 #include "SpeedUp.h"
 #include "Player.h"
-#include "WeaponComponent.h"
+#include "Weapon.h"
 #include "Renderer/Renderer.h"
 #include "Framework/Scene.h"
 #include "SpaceGame.h"

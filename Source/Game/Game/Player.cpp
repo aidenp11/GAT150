@@ -1,6 +1,6 @@
 #include "Player.h"
 #include "Input/InputSystem.h"
-#include "WeaponComponent.h"
+#include "Weapon.h"
 #include "Renderer/Renderer.h"
 #include "SpaceGame.h"
 #include "Audio/AudioSystem.h"
@@ -46,23 +46,23 @@ void Player::Update(float dt)
 	m_physicsComponent->ApplyForce(forward * m_speed * thrust); 
 
 
-	if (kiko::g_inputSystem.GetKeyDown(SDL_SCANCODE_SPACE) &&
-		!kiko::g_inputSystem.GetPreviousKeyDown(SDL_SCANCODE_SPACE))
-	{
-		kiko::Transform transform { transformg.position - 10, transformg.rotation, 0.5f };
-
-		std::unique_ptr<Weapon> weapon = std::make_unique<Weapon>( 500.0f, transform );
-		std::unique_ptr<kiko::SpriteComponent> component = std::make_unique<kiko::SpriteComponent>();
-		component->m_texture = GET_RESOURCE(kiko::Texture, "rocket.png", kiko::g_renderer);
-		weapon->AddComponent(std::move(component));
-
-		auto collisionComponent = std::make_unique<kiko::CircleCollisionComponent>();
-		collisionComponent->m_radius = 30.0f;
-		weapon->AddComponent(std::move(collisionComponent));
-
-		weapon->tag = "PlayerBullet";
-		m_scene->Add(std::move(weapon));
-	}
+//	if (kiko::g_inputSystem.GetKeyDown(SDL_SCANCODE_SPACE) &&
+//		!kiko::g_inputSystem.GetPreviousKeyDown(SDL_SCANCODE_SPACE))
+//	{
+//		kiko::Transform transform { transformg.position - 10, transformg.rotation, 0.5f };
+//
+//		std::unique_ptr<Weapon> weapon = std::make_unique<Weapon>( 500.0f, transform );
+//		std::unique_ptr<kiko::SpriteComponent> component = std::make_unique<kiko::SpriteComponent>();
+//		component->m_texture = GET_RESOURCE(kiko::Texture, "rocket.png", kiko::g_renderer);
+//		weapon->AddComponent(std::move(component));
+//
+//		auto collisionComponent = std::make_unique<kiko::CircleCollisionComponent>();
+//		collisionComponent->m_radius = 30.0f;
+//		weapon->AddComponent(std::move(collisionComponent));
+//
+//		weapon->tag = "PlayerBullet";
+//		m_scene->Add(std::move(weapon));
+//	}
 }
 
 void Player::OnCollision(Actor* other)

@@ -1,6 +1,6 @@
 #include "Enemy.h"
 #include "Player.h"
-#include "WeaponComponent.h"
+#include "Weapon.h"
 #include "Renderer/Renderer.h"
 #include "Framework/Framework.h"
 #include "SpaceGame.h"
@@ -40,7 +40,7 @@ void Enemy::Update(float dt)
 	transformg.position.x = kiko::Wrap(transformg.position.x, (float)kiko::g_renderer.GetWidth());
 	transformg.position.y = kiko::Wrap(transformg.position.y, (float)kiko::g_renderer.GetHeight());
 
-	m_fireTimer -= dt;
+	/*m_fireTimer -= dt;
 	if (m_fireTimer <= 0)
 	{
 		kiko::Transform transform { transformg.position, transformg.rotation, 0.3f };
@@ -48,7 +48,7 @@ void Enemy::Update(float dt)
 		weapon->tag = "EnemyBullet";
 		m_scene->Add(std::move(weapon));
 		m_fireTimer = m_fireRate;
-	}
+	}*/
 }
 
 void Enemy::OnCollision(Actor* other)

@@ -61,7 +61,7 @@ namespace kiko
 		READ_DATA(value, tag);
 		READ_DATA(value, m_lifespan);
 
-		if (HAS_DATA(value, transform)) transformg.Read(value);
+		if (HAS_DATA(value, transform)) transformg.Read(GET_DATA(value, transform));
 
 		if (HAS_DATA(value, components) && GET_DATA(value, components).IsArray())
 		{
