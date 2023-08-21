@@ -10,6 +10,8 @@
 
 bool Enemy::Initialize()
 {
+	Actor::Initialize();
+
 	auto collisionComponent = GetComponent<kiko::CollisionComponent>();
 	if (collisionComponent)
 	{

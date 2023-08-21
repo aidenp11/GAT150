@@ -50,7 +50,7 @@ namespace kiko
 	{
 		for (auto& actor : m_actors)
 		{
-			actor->Draw(renderer);
+			if (actor->active) actor->Draw(renderer);
 		}
 	}
 	void Scene::Add(std::unique_ptr<Actor> actor)
@@ -58,9 +58,13 @@ namespace kiko
 		actor->m_scene = this;
 		m_actors.push_back(std::move(actor));
 	}
-	void Scene::RemoveAll()
+	void Scene::RemoveAll(bool force)
 	{
-		m_actors.clear();
+		auto iter = m_actors.begin();
+		while (iter != m_actors.end())
+		{
+			(force || !(*iter)->persistent) ? iter = m_actors.erase(iter) : iter++;
+		}
 	}
 	bool Scene::Load(const std::string& filename)
 	{
@@ -88,7 +92,16 @@ namespace kiko
 				auto actor = CREATE_CLASS_BASE(Actor, type);
 				actor->Read(actorValue);
 
-				Add(std::move(actor));
+				if (actor->prototype)
+				{
+					std::string name = actor->name;
+					Factory::Instance().RegisterPrototype(name, std::move(actor));
+				}
+				else
+				{
+					Add(std::move(actor));
+				}
+
 			}
 		}
 	}

@@ -98,8 +98,7 @@ int main(int argc, char* argv[])
 		kiko::g_renderer.SetColor(0, 0, 0, 0);
 
 		kiko::g_renderer.BeginFrame();
-
-		kiko::Vector2 vel(1.0f, 1.0f);
+		game->Draw(kiko::g_renderer);
 
 		for (auto& star : stars)
 		{
@@ -112,7 +111,6 @@ int main(int argc, char* argv[])
 			kiko::g_renderer.DrawPoint(star.m_pos.x, star.m_pos.y);
 
 		} 
-		game->Draw(kiko::g_renderer);
 		
 		kiko::g_renderer.EndFrame();
 	}

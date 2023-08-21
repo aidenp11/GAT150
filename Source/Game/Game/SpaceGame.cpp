@@ -45,6 +45,7 @@ void SpaceGame::Update(float dt)
 			!kiko::g_inputSystem.GetPreviousKeyDown(SDL_SCANCODE_SPACE))
 		{
 			m_state = eState::StartGame;
+			m_scene->GetActorByName<kiko::Actor>("Background")->active = false;
 		}
 		break;
 	case SpaceGame::eState::StartGame:
@@ -154,6 +155,7 @@ void SpaceGame::Update(float dt)
 
 void SpaceGame::Draw(kiko::Renderer& renderer)
 {
+	m_scene->Draw(renderer);
 	if (m_state == eState::Title)
 	{
 		m_titleText->Draw(renderer, 400, 300);
@@ -166,5 +168,4 @@ void SpaceGame::Draw(kiko::Renderer& renderer)
 
 	m_scoreText->Draw(renderer, 40, 20);
 	kiko::g_particleSystem.Draw(renderer);
-	m_scene->Draw(renderer);
 }

@@ -46,9 +46,13 @@ void Player::Update(float dt)
 	m_physicsComponent->ApplyForce(forward * m_speed * thrust); 
 
 
-//	if (kiko::g_inputSystem.GetKeyDown(SDL_SCANCODE_SPACE) &&
-//		!kiko::g_inputSystem.GetPreviousKeyDown(SDL_SCANCODE_SPACE))
-//	{
+	if (kiko::g_inputSystem.GetKeyDown(SDL_SCANCODE_SPACE) &&
+		!kiko::g_inputSystem.GetPreviousKeyDown(SDL_SCANCODE_SPACE))
+	{
+		auto weapon = INSTANTIATE(Weapon, "Rocket");
+		weapon->transformg = { transformg.position, transformg.rotation, 0.5f };
+		weapon->Initialize();
+		m_scene->Add(std::move(weapon));
 //		kiko::Transform transform { transformg.position - 10, transformg.rotation, 0.5f };
 //
 //		std::unique_ptr<Weapon> weapon = std::make_unique<Weapon>( 500.0f, transform );
@@ -62,7 +66,7 @@ void Player::Update(float dt)
 //
 //		weapon->tag = "PlayerBullet";
 //		m_scene->Add(std::move(weapon));
-//	}
+	}
 }
 
 void Player::OnCollision(Actor* other)

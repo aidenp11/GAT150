@@ -18,6 +18,8 @@ namespace kiko
 			transformg{ transform }
 		{}
 
+		Actor(const Actor& other);
+
 		virtual bool Initialize() override;
 		virtual void OnDestroy() override;
 
@@ -49,10 +51,12 @@ namespace kiko
 			return std::fmod(value, max) + ((value < 0) ? max : 0);
 		}
 		std::string tag;
+		bool persistent = false;
+		bool prototype = false;
+		bool m_destroyed = false;
 
 	protected:
 		std::vector<std::unique_ptr<Component>> components;
-		bool m_destroyed = false;
 	};
 
 	template<typename T>

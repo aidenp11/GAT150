@@ -4,8 +4,12 @@
 
 namespace kiko
 {
+	CLASS_DEFINITION(Weapon)
+
 	bool Weapon::Initialize()
 	{
+		Actor::Initialize();
+
 		auto collisionComponent = GetComponent<kiko::CollisionComponent>();
 		if (collisionComponent)
 		{
@@ -22,6 +26,8 @@ namespace kiko
 
 	void Weapon::Update(float dt)
 	{
+		Actor::Update(dt);
+
 		kiko::vec2 forward = kiko::vec2{ 0, -1 }.Rotate(transformg.rotation);
 		transformg.position += forward * speed * kiko::g_time.GetDeltaTime();
 		transformg.position.x = kiko::Wrap(transformg.position.x, (float)kiko::g_renderer.GetWidth());
@@ -37,6 +43,8 @@ namespace kiko
 	}
 	void Weapon::Read(const json_t& value)
 	{
+		Actor::Read(value);
+
 		READ_DATA(value, speed);
 	}
 }
