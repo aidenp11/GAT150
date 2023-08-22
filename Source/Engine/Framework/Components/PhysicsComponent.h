@@ -2,7 +2,7 @@
 #include "Component.h"
 #include "Core/Vector.h"
 
-namespace kiko
+namespace lady
 {
 	class PhysicsComponent : public Component
 	{

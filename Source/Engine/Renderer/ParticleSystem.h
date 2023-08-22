@@ -2,7 +2,7 @@
 #include <vector>
 #include "Particle.h"
 
-namespace kiko {
+namespace lady {
 	class ParticleSystem
 	{
 	public:

@@ -3,7 +3,7 @@
 #include "Framework/Resource/Resource.h"
 #include <vector>
 
-namespace kiko 
+namespace lady 
 {
 	class Renderer;
 

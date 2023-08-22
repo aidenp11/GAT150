@@ -9,7 +9,7 @@
 #define new DEBUG_NEW
 #endif // _DEBUG
 
-namespace kiko
+namespace lady
 {
 	class MemoryTracker
 	{

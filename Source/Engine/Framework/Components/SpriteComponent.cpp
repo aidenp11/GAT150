@@ -3,13 +3,13 @@
 #include "Framework/Actor.h"
 #include "Framework/Resource/ResourceManager.h"
 
-namespace kiko
+namespace lady
 {
 	CLASS_DEFINITION(SpriteComponent)
 
 		bool SpriteComponent::Initialize()
 	{
-		if (!textureName.empty()) m_texture = GET_RESOURCE(Texture, textureName, kiko::g_renderer);
+		if (!textureName.empty()) m_texture = GET_RESOURCE(Texture, textureName, lady::g_renderer);
 		return true;
 	}
 

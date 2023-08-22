@@ -1,6 +1,6 @@
 #include "Object.h"
 
-namespace kiko
+namespace lady
 {
 	void Object::Read(const rapidjson::Value& value)
 	{

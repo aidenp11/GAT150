@@ -2,8 +2,9 @@
 #include "Framework/Game.h"
 #include "Renderer/Text.h"
 #include "Framework/Emitter.h"
+#include "Framework/Event/EventManager.h"
 
-class SpaceGame : public kiko::Game
+class SpaceGame : public lady::Game, lady::IEventListener
 {
 public:
 	enum class eState
@@ -23,7 +24,11 @@ public:
 
 	virtual void Update(float dt) override;
 
-	virtual void Draw(kiko::Renderer& renderer) override;
+	virtual void Draw(lady::Renderer& renderer) override;
+
+	void AddPoint(const lady::Event& event);
+
+	void OnPlayerDead(const lady::Event& event);
 
 	void SetState(eState state) { m_state = state; }
 
@@ -33,9 +38,9 @@ private:
 	float m_spawnTime = 3;
 	float m_stateTimer = 0;
 
-	std::shared_ptr<kiko::Font> m_font;
-	std::unique_ptr<kiko::Text> m_scoreText;
-	std::unique_ptr<kiko::Text> m_titleText;
-	std::unique_ptr<kiko::Text> m_gameOverText;
+	std::shared_ptr<lady::Font> m_font;
+	std::unique_ptr<lady::Text> m_scoreText;
+	std::unique_ptr<lady::Text> m_titleText;
+	std::unique_ptr<lady::Text> m_gameOverText;
 
 };

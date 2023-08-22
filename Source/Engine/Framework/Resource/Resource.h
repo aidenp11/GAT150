@@ -2,7 +2,7 @@
 #include <string>
 #include <memory>
 
-namespace kiko
+namespace lady
 {
 	class Resource
 	{

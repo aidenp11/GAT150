@@ -11,11 +11,11 @@ bool Player::Initialize()
 	Actor::Initialize(); 
 	
 	// cache off
-	m_physicsComponent = GetComponent<kiko::PhysicsComponent>();
-	auto collisionComponent = GetComponent<kiko::CollisionComponent>();
+	m_physicsComponent = GetComponent<lady::PhysicsComponent>();
+	auto collisionComponent = GetComponent<lady::CollisionComponent>();
 	if (collisionComponent)
 	{
-		auto renderComponent = GetComponent<kiko::RenderComponent>();
+		auto renderComponent = GetComponent<lady::RenderComponent>();
 		if (renderComponent)
 		{
 			float scale = transformg.scale;
@@ -31,23 +31,23 @@ void Player::Update(float dt)
 	Actor::Update(dt);
 
 	float rotate = 0;
-	if (kiko::g_inputSystem.GetKeyDown(SDL_SCANCODE_A)) rotate = -1;
-	if (kiko::g_inputSystem.GetKeyDown(SDL_SCANCODE_D)) rotate = 1;
-	transformg.rotation += rotate * m_turnRate * kiko::g_time.GetDeltaTime();
+	if (lady::g_inputSystem.GetKeyDown(SDL_SCANCODE_A)) rotate = -1;
+	if (lady::g_inputSystem.GetKeyDown(SDL_SCANCODE_D)) rotate = 1;
+	transformg.rotation += rotate * m_turnRate * lady::g_time.GetDeltaTime();
 
 	float thrust = 0;
-	if (kiko::g_inputSystem.GetKeyDown(SDL_SCANCODE_W)) thrust = 1;
+	if (lady::g_inputSystem.GetKeyDown(SDL_SCANCODE_W)) thrust = 1;
 
-	kiko::vec2 forward = kiko::vec2{ 0, -1 }.Rotate(transformg.rotation);
-	transformg.position += forward * m_speed * thrust * kiko::g_time.GetDeltaTime();
-	transformg.position.x = kiko::Wrap(transformg.position.x, (float)kiko::g_renderer.GetWidth());
-	transformg.position.y = kiko::Wrap(transformg.position.y, (float)kiko::g_renderer.GetHeight());
+	lady::vec2 forward = lady::vec2{ 0, -1 }.Rotate(transformg.rotation);
+	transformg.position += forward * m_speed * thrust * lady::g_time.GetDeltaTime();
+	transformg.position.x = lady::Wrap(transformg.position.x, (float)lady::g_renderer.GetWidth());
+	transformg.position.y = lady::Wrap(transformg.position.y, (float)lady::g_renderer.GetHeight());
 
 	m_physicsComponent->ApplyForce(forward * m_speed * thrust); 
 
 
-	if (kiko::g_inputSystem.GetKeyDown(SDL_SCANCODE_SPACE) &&
-		!kiko::g_inputSystem.GetPreviousKeyDown(SDL_SCANCODE_SPACE))
+	if (lady::g_inputSystem.GetKeyDown(SDL_SCANCODE_SPACE) &&
+		!lady::g_inputSystem.GetPreviousKeyDown(SDL_SCANCODE_SPACE))
 	{
 		auto weapon = INSTANTIATE(Weapon, "Rocket");
 		weapon->transformg = { transformg.position, transformg.rotation, 0.5f };
@@ -83,10 +83,11 @@ void Player::OnCollision(Actor* other)
 		}
 		if (m_health == 0)
 		{
-			m_game->SetLives(m_game->GetLives() - 1);
+			//m_game->SetLives(m_game->GetLives() - 1);
+			lady::EventManager::Instance().DispatchEvent("OnPlayerDead", 0);
 			m_destroyed = true;
-			kiko::g_audioSystem.PlayOneShot("explosion", false);
-			dynamic_cast<SpaceGame*>(m_game)->SetState(SpaceGame::eState::PlayerDead);
+			lady::g_audioSystem.PlayOneShot("explosion", false);
+			//dynamic_cast<SpaceGame*>(m_game)->SetState(SpaceGame::eState::PlayerDead);
 		}
 }
 

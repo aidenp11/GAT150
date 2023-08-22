@@ -1,5 +1,5 @@
 #include "AudioSystem.h"
-namespace kiko
+namespace lady
 {
 	AudioSystem g_audioSystem;
 

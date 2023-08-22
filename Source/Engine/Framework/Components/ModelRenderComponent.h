@@ -3,7 +3,7 @@
 #include "Renderer/Model.h"
 #include "Renderer/Texture.h"
 
-namespace kiko
+namespace lady
 {
 	class ModelRenderComponent : public RenderComponent
 	{

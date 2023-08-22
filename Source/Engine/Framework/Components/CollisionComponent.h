@@ -1,7 +1,7 @@
 #pragma once
 #include "Component.h"
 
-namespace kiko
+namespace lady
 {
 	class CollisionComponent : public Component
 	{

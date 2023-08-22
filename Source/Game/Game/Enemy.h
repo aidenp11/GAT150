@@ -1,10 +1,10 @@
 #pragma once
 #include "FrameWork/Actor.h"
 
-class Enemy : public kiko::Actor
+class Enemy : public lady::Actor
 {
 public:
-	Enemy(float speed, float turnRate, float health, const kiko::Transform& transform) :
+	Enemy(float speed, float turnRate, float health, const lady::Transform& transform) :
 		Actor{ transform },
 		m_speed{ speed },
 		m_turnRate{ turnRate },

@@ -3,7 +3,7 @@
 #include "Renderer/Texture.h"
 #include "Framework/Factory.h"
 
-namespace kiko
+namespace lady
 {
 	class SpriteComponent : public RenderComponent
 	{

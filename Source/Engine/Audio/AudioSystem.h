@@ -2,7 +2,7 @@
 #include <fmod/core/inc/fmod.hpp>
 #include <string>
 #include <map>
-namespace kiko
+namespace lady
 {
 	class AudioSystem
 	{

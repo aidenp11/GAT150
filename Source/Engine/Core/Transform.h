@@ -3,7 +3,7 @@
 #include "Matrix33.h"
 #include "json.h"
 
-namespace kiko
+namespace lady
 {
 	class Transform
 	{

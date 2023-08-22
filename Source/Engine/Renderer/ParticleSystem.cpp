@@ -1,6 +1,6 @@
 #include "ParticleSystem.h"
 
-namespace kiko {
+namespace lady {
 	ParticleSystem g_particleSystem{ 100 };
 
 	void ParticleSystem::Update(float dt)

@@ -1,7 +1,7 @@
 #pragma once
 #include "Framework/Object.h"
 
-namespace kiko
+namespace lady
 {
 	class Component : public Object 
 	{

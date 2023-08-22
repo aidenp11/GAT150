@@ -1,7 +1,7 @@
 #include "EnginePhysicsComponent.h"
 #include "Framework/Actor.h"
 
-namespace kiko
+namespace lady
 {
 	CLASS_DEFINITION(EnginePhysicsComponet)
 

@@ -17,10 +17,10 @@ struct EmitterData
 	float damping = 0;
 	float angle = 0;
 	float angleRange = 0;
-	kiko::Color color;
+	lady::Color color;
 };
 
-namespace kiko {
+namespace lady {
 	class Emitter : public Actor
 	{
 	public:
@@ -30,7 +30,7 @@ namespace kiko {
 			m_data{ data }
 		{}
 		void Update(float dt);
-		void Draw(kiko::Renderer& renderer);
+		void Draw(lady::Renderer& renderer);
 
 	private:
 		void Emit();

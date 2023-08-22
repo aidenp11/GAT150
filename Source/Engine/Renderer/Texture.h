@@ -4,7 +4,7 @@
 
 struct SDL_Texture;
 
-namespace kiko
+namespace lady
 {
 	class Texture : public Resource
 	{

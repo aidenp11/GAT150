@@ -2,7 +2,7 @@
 #include "Vector.h"
 #include "Vector3.h"
 
-namespace kiko
+namespace lady
 {
 	class Matrix33
 	{

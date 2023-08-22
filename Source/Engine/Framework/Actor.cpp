@@ -1,7 +1,7 @@
 #include "Actor.h"
 #include "Components/RenderComponent.h"
 
-namespace kiko
+namespace lady
 {
 	CLASS_DEFINITION(Actor)
 
@@ -54,7 +54,7 @@ namespace kiko
 		}
 	}
 
-	void Actor::Draw(kiko::Renderer& renderer)
+	void Actor::Draw(lady::Renderer& renderer)
 	{
 		//m_model->Draw(renderer, m_transform);
 		for (auto& component : components)

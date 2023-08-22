@@ -4,7 +4,7 @@
 #include <vector>
 #include <array>
 
-namespace kiko
+namespace lady
 {
 	class InputSystem
 	{

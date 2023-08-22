@@ -4,7 +4,7 @@
 #include <iostream>
 #include <string>
 
-namespace kiko
+namespace lady
 {
 	class Color
 	{

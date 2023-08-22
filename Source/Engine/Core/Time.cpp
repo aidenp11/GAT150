@@ -1,7 +1,7 @@
 #include "Time.h"
 #include "MathUtils.h"
 
-namespace kiko
+namespace lady
 {
 	Time g_time;
 

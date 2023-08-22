@@ -19,7 +19,7 @@
 #define CLASS_DEFINITION(classname) \
 	classname::Register register_class;
 
-namespace kiko
+namespace lady
 {
 	class Object 
 	{

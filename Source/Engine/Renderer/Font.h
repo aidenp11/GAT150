@@ -3,7 +3,7 @@
 #include "Framework/Resource/Resource.h"
 
 struct _TTF_Font;
-namespace kiko
+namespace lady
 {
 	class Font : public Resource
 	{

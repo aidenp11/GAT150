@@ -4,7 +4,7 @@
 #include <sstream>
 #include <C:\Users\apatrick\source\repos\GAT150\Source\ThirdParty\rapidjson\include\rapidjson\istreamwrapper.h>
 
-namespace kiko
+namespace lady
 {
 	bool Json::Load(const std::string& filename, rapidjson::Document& document)
 	{

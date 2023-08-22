@@ -2,7 +2,7 @@
 #include <cmath>
 #include <sstream>
 
-namespace kiko
+namespace lady
 {
 	class Vector2
 	{

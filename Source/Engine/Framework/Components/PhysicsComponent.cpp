@@ -1,8 +1,8 @@
 #include "PhysicsComponent.h"
 
-namespace kiko
+namespace lady
 {
-	void kiko::PhysicsComponent::ApplyForce(const vec2& force)
+	void lady::PhysicsComponent::ApplyForce(const vec2& force)
 	{
 
 	}

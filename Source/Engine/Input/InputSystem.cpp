@@ -1,6 +1,6 @@
 #include "InputSystem.h"
 
-namespace kiko
+namespace lady
 {
 	InputSystem g_inputSystem;
 

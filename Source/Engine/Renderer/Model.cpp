@@ -2,12 +2,12 @@
 #include "Renderer.h"
 #include <sstream>
 
-namespace kiko
+namespace lady
 {
 	bool Model::Load(const std::string& filename)
 	{
 		std::string buffer;
-		kiko::readFile(filename, buffer);
+		lady::readFile(filename, buffer);
 
 		std::istringstream stream(buffer);
 
@@ -27,7 +27,7 @@ namespace kiko
 
 		return true;
 	}
-	void kiko::Model::Draw(Renderer& renderer, const vec2& position, float rotation, float scale)
+	void lady::Model::Draw(Renderer& renderer, const vec2& position, float rotation, float scale)
 	{
 		if (m_points.empty()) return;
 
@@ -76,7 +76,7 @@ namespace kiko
 	bool Model::Create(std::string filename, ...)
 	{
 		std::string buffer;
-		if (!kiko::readFile(filename, buffer))
+		if (!lady::readFile(filename, buffer))
 		{
 			WARNING_LOG("Could not load model: " << filename);
 			return false;

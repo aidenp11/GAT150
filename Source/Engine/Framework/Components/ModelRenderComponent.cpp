@@ -2,7 +2,7 @@
 #include "Framework/Actor.h"
 #include "Framework/Framework.h"
 
-namespace kiko
+namespace lady
 {
 	CLASS_DEFINITION(ModelRenderComponent)
 

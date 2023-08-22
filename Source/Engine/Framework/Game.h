@@ -1,7 +1,7 @@
 #pragma once
 #include <memory>
 
-namespace kiko
+namespace lady
 {
 	class Scene;
 	class Renderer;

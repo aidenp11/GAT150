@@ -1,10 +1,10 @@
 #pragma once
 #include "FrameWork/Actor.h"
 
-class SpeedUp : public kiko::Actor
+class SpeedUp : public lady::Actor
 {
 public:
-	SpeedUp(float speed, float turnRate, const kiko::Transform& transform) :
+	SpeedUp(float speed, float turnRate, const lady::Transform& transform) :
 		Actor{ transform },
 		m_speed{ speed },
 		m_turnRate{ turnRate }

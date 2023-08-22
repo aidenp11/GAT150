@@ -3,7 +3,7 @@
 #include <SDL2-devel-2.28.1-VC/SDL2-2.28.1/include/SDL_ttf.h>
 #include <SDL2-devel-2.28.1-VC/SDL2-2.28.1/include/SDL_image.h>
 
-namespace kiko
+namespace lady
 {
 	Renderer g_renderer;
 

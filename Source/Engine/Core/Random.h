@@ -1,7 +1,7 @@
 #pragma once
 #include <random>
 
-namespace kiko
+namespace lady
 {
 	inline void seedRandom(unsigned int seed) { srand(seed); }
 

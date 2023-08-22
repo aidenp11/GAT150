@@ -2,10 +2,10 @@
 #include "FrameWork/Actor.h"
 #include "Framework/Components/PhysicsComponent.h"
 
-class Player : public kiko::Actor
+class Player : public lady::Actor
 {
 public:
-	Player(float speed, float turnRate, float health, const kiko::Transform& transform) :
+	Player(float speed, float turnRate, float health, const lady::Transform& transform) :
 		Actor{ transform },
 		m_speed{ speed },
 		m_turnRate{ turnRate },
@@ -21,5 +21,5 @@ private:
 	float m_turnRate = 0;
 	float m_health = 0;
 
-	kiko::PhysicsComponent* m_physicsComponent = nullptr;
+	lady::PhysicsComponent* m_physicsComponent = nullptr;
 };

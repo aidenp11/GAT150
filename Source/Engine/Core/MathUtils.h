@@ -1,7 +1,7 @@
 #pragma once
 #include <cmath>
 
-namespace kiko
+namespace lady
 {
 	constexpr float pi = 3.141592653589793238462643f;
 	constexpr float twopi = 3.141592653589793238462643f * 2.0f;

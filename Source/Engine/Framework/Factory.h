@@ -5,11 +5,11 @@
 #include <map>
 #include <string>
 
-#define CREATE_CLASS(classname) kiko::Factory::Instance().Create<kiko::classname>(#classname)
-#define CREATE_CLASS_BASE(classbase, classname) kiko::Factory::Instance().Create<kiko::classbase>(classname)
-#define INSTANTIATE(classbase, classname) kiko::Factory::Instance().Create<kiko::classbase>(classname)
+#define CREATE_CLASS(classname) lady::Factory::Instance().Create<lady::classname>(#classname)
+#define CREATE_CLASS_BASE(classbase, classname) lady::Factory::Instance().Create<lady::classbase>(classname)
+#define INSTANTIATE(classbase, classname) lady::Factory::Instance().Create<lady::classbase>(classname)
 
-namespace kiko
+namespace lady
 {
 	class CreatorBase
 	{
@@ -90,6 +90,8 @@ namespace kiko
 		{
 			return std::unique_ptr<T>(dynamic_cast<T*>(iter->second->Create().release()));
 		}
+
+		ERROR_LOG("Class not found in Factory: " << key);
 
 		return std::unique_ptr<T>();
 	}

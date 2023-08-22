@@ -2,7 +2,7 @@
 #include "FileIO.h"
 #include <iostream>
 
-namespace kiko
+namespace lady
 {
 	bool Logger::Log(LogLevel logLevel, std::string filename, int line)
 	{
@@ -10,16 +10,16 @@ namespace kiko
 
 		switch (logLevel)
 		{
-		case kiko::LogLevel::Info:
+		case lady::LogLevel::Info:
 			*this << "INFO: ";
 			break;
-		case kiko::LogLevel::Warning:
+		case lady::LogLevel::Warning:
 			*this << "WARNING: ";
 			break;
-		case kiko::LogLevel::Error:
+		case lady::LogLevel::Error:
 			*this << "ERROR: ";
 			break;
-		case kiko::LogLevel::Assert:
+		case lady::LogLevel::Assert:
 			*this << "ASSERT: ";
 			break;
 		default:

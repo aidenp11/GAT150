@@ -2,7 +2,7 @@
 #include <filesystem>
 #include <string>
 
-namespace kiko
+namespace lady
 {
 	std::string getFilePath();
 	bool setFilePath(const std::filesystem::path& path);

@@ -5,7 +5,7 @@
 #include "Components/Component.h"
 #include <memory>
 
-namespace kiko
+namespace lady
 {
 	class Actor : public Object
 	{
@@ -14,7 +14,7 @@ namespace kiko
 
 		Actor() = default;
 
-		Actor(const kiko::Transform& transform) :
+		Actor(const lady::Transform& transform) :
 			transformg{ transform }
 		{}
 
@@ -24,7 +24,7 @@ namespace kiko
 		virtual void OnDestroy() override;
 
 		virtual void Update(float dt);
-		virtual void Draw(kiko::Renderer& renderer);
+		virtual void Draw(lady::Renderer& renderer);
 
 		void AddComponent(std::unique_ptr<Component> component);
 

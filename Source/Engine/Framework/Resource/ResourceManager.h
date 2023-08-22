@@ -5,9 +5,9 @@
 #include <memory>
 #include <string>
 
-#define GET_RESOURCE(type, filename, ... ) kiko::ResourceManager::Instance().Get<type>(filename, __VA_ARGS__)
+#define GET_RESOURCE(type, filename, ... ) lady::ResourceManager::Instance().Get<type>(filename, __VA_ARGS__)
 
-namespace kiko
+namespace lady
 {
 	class ResourceManager : public Singleton<ResourceManager>
 	{

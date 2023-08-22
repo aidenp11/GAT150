@@ -12,10 +12,10 @@ bool Enemy::Initialize()
 {
 	Actor::Initialize();
 
-	auto collisionComponent = GetComponent<kiko::CollisionComponent>();
+	auto collisionComponent = GetComponent<lady::CollisionComponent>();
 	if (collisionComponent)
 	{
-		auto renderComponent = GetComponent<kiko::RenderComponent>();
+		auto renderComponent = GetComponent<lady::RenderComponent>();
 		if (renderComponent)
 		{
 			float scale = transformg.scale;
@@ -33,14 +33,14 @@ void Enemy::Update(float dt)
 	Player* player = m_scene->GetActor<Player>();
 	if (player)
 	{
-		kiko::Vector2 direction = player->transformg.position - transformg.position;
-		transformg.rotation = direction.Angle() + kiko::halfpi;
+		lady::Vector2 direction = player->transformg.position - transformg.position;
+		transformg.rotation = direction.Angle() + lady::halfpi;
 	}
 
-	kiko::vec2 forward = kiko::vec2{ 0, -1 }.Rotate(transformg.rotation);
-	transformg.position += forward * m_speed * kiko::g_time.GetDeltaTime();
-	transformg.position.x = kiko::Wrap(transformg.position.x, (float)kiko::g_renderer.GetWidth());
-	transformg.position.y = kiko::Wrap(transformg.position.y, (float)kiko::g_renderer.GetHeight());
+	lady::vec2 forward = lady::vec2{ 0, -1 }.Rotate(transformg.rotation);
+	transformg.position += forward * m_speed * lady::g_time.GetDeltaTime();
+	transformg.position.x = lady::Wrap(transformg.position.x, (float)lady::g_renderer.GetWidth());
+	transformg.position.y = lady::Wrap(transformg.position.y, (float)lady::g_renderer.GetHeight());
 
 	/*m_fireTimer -= dt;
 	if (m_fireTimer <= 0)
@@ -62,7 +62,8 @@ void Enemy::OnCollision(Actor* other)
 	if (m_health <= 0)
 	{
 		m_destroyed = true;
-		kiko::g_audioSystem.PlayOneShot("explosion", false);
-		m_game->AddPoint(kiko::random(150));
+		lady::g_audioSystem.PlayOneShot("explosion", false);
+		lady::EventManager::Instance().DispatchEvent("AddPoints", 100);
+		m_game->AddPoint(lady::random(150));
 	}
 }

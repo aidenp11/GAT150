@@ -2,7 +2,7 @@
 #include "Renderer/Particle.h"
 #include "Renderer/ParticleSystem.h"
 
-void kiko::Emitter::Update(float dt)
+void lady::Emitter::Update(float dt)
 {
 	Actor::Update(dt);
 	
@@ -26,12 +26,12 @@ void kiko::Emitter::Update(float dt)
 	}
 }
 
-void kiko::Emitter::Draw(kiko::Renderer& renderer)
+void lady::Emitter::Draw(lady::Renderer& renderer)
 {
 
 }
 
-void kiko::Emitter::Emit()
+void lady::Emitter::Emit()
 {
 	Particle* particle = g_particleSystem.GetFreeParticle();
 	if (particle)

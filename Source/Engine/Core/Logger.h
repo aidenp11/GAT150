@@ -6,10 +6,10 @@
 #include <iostream>
 
 #ifdef _DEBUG
-#define INFO_LOG(message) { if (kiko::Logger::Instance().Log(kiko::LogLevel::Info, __FILE__, __LINE__)) { kiko::Logger::Instance() << message << "\n";} }
-#define WARNING_LOG(message) { if (kiko::Logger::Instance().Log(kiko::LogLevel::Warning, __FILE__, __LINE__)) { kiko::Logger::Instance() << message << "\n";} }
-#define ERROR_LOG(message) { if (kiko::Logger::Instance().Log(kiko::LogLevel::Error, __FILE__, __LINE__)) { kiko::Logger::Instance() << message << "\n";} }
-#define ASSERT_LOG(condition, message) { if (!condition && Logger::Instance().Log(kiko::LogLevel::Assert, __FILE__, __LINE__)) { kiko::Logger::Instance() << message << "\n";} assert(condition); }
+#define INFO_LOG(message) { if (lady::Logger::Instance().Log(lady::LogLevel::Info, __FILE__, __LINE__)) { lady::Logger::Instance() << message << "\n";} }
+#define WARNING_LOG(message) { if (lady::Logger::Instance().Log(lady::LogLevel::Warning, __FILE__, __LINE__)) { lady::Logger::Instance() << message << "\n";} }
+#define ERROR_LOG(message) { if (lady::Logger::Instance().Log(lady::LogLevel::Error, __FILE__, __LINE__)) { lady::Logger::Instance() << message << "\n";} }
+#define ASSERT_LOG(condition, message) { if (!condition && Logger::Instance().Log(lady::LogLevel::Assert, __FILE__, __LINE__)) { lady::Logger::Instance() << message << "\n";} assert(condition); }
 #else
 #define INFO_LOG(message) {}
 #define WARNING_LOG(message) {}
@@ -17,7 +17,7 @@
 #define ASSERT_LOG(condition, message) {}
 #endif // _DEBUG
 
-namespace kiko
+namespace lady
 {
 	enum class LogLevel
 	{

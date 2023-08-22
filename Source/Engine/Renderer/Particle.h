@@ -3,16 +3,16 @@
 
 struct ParticleData
 {
-	kiko::vec2 position;
-	kiko::vec2 prevPosition;
-	kiko::vec2 velocity;
+	lady::vec2 position;
+	lady::vec2 prevPosition;
+	lady::vec2 velocity;
 	float damping = 0;
-	kiko::Color color;
+	lady::Color color;
 	float lifetimer = 0;
 	float lifetime = 0;
 };
 
-namespace kiko {
+namespace lady {
 	class Renderer; 
 
 	class Particle

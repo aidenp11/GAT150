@@ -1,7 +1,7 @@
 #pragma once
 #include "Framework/Actor.h"
 
-namespace kiko
+namespace lady
 {
 	class Weapon : public Actor
 	{

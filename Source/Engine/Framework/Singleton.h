@@ -1,6 +1,6 @@
 #pragma once
 
-namespace kiko
+namespace lady
 {
 	template <typename T>
 	class Singleton
