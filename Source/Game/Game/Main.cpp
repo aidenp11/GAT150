@@ -6,6 +6,7 @@
 #include "Audio/AudioSystem.h"
 #include "SpaceGame.h"
 #include "Framework/Framework.h"
+#include "Physics/PhysicsSystem.h"
 #include <iostream>
 #include <vector>
 #include <thread>
@@ -107,6 +108,7 @@ int main(int argc, char* argv[])
 
 	lady::g_inputSystem.Initialize();
 	lady::g_audioSystem.Initialize();
+	lady::PhysicsSystem::Instance().Initialize();
 
 	unique_ptr<SpaceGame> game = make_unique<SpaceGame>();
 	game->Initialize();
