@@ -6,7 +6,7 @@ namespace lady
 	class CollisionComponent : public Component
 	{
 	public:
-		virtual bool CheckCollide(CollisionComponent* collision) = 0;
+		virtual bool CheckCollide(CollisionComponent* collision) { return true; };
 
 	public:
 		float m_radius = 0;

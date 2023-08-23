@@ -15,8 +15,13 @@ namespace lady
 
 	}
 
+	void EnginePhysicsComponet::ApplyTorque(float torque)
+	{
+		//
+	}
+
 	void EnginePhysicsComponet::Read(const json_t& value)
 	{
-
+		//
 	}
 }

@@ -33,7 +33,8 @@ void Player::Update(float dt)
 	float rotate = 0;
 	if (lady::g_inputSystem.GetKeyDown(SDL_SCANCODE_A)) rotate = -1;
 	if (lady::g_inputSystem.GetKeyDown(SDL_SCANCODE_D)) rotate = 1;
-	transformg.rotation += rotate * m_turnRate * lady::g_time.GetDeltaTime();
+	//transformg.rotation += rotate * m_turnRate * lady::g_time.GetDeltaTime();
+	m_physicsComponent->ApplyTorque(rotate * m_turnRate);
 
 	float thrust = 0;
 	if (lady::g_inputSystem.GetKeyDown(SDL_SCANCODE_W)) thrust = 1;

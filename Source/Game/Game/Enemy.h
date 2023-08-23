@@ -1,5 +1,6 @@
 #pragma once
 #include "FrameWork/Actor.h"
+#include "Framework/Components/PhysicsComponent.h"
 
 class Enemy : public lady::Actor
 {

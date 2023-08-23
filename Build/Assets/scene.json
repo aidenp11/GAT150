@@ -50,13 +50,23 @@
 				"rotation": 0
 			},
 			"components": [
-				{
-					"type": "TextRenderComponent",
-					"fontName": "BodoniFLF-Bold.ttf",
-					"fontSize": 24,
-					"text": "SPACE GAME"
-				}
+        {
+          "type": "TextRenderComponent",
+          "fontName": "BodoniFLF-Bold.ttf",
+          "fontSize": 24,
+          "text": "SPACE GAME"
+        }
 			]
-		}
+		}//,
+		//{
+		//	"type": "BoxPhysicsComponent",
+		//	"damping": 0.98,
+		//	"angularDamping": 2,
+		//	"gravityScale":  0
+		//},
+		//{
+		//	"type": "BoxCollisionComponent",
+		//	"size":  [32, 32]
+		//}
 	]
 }

@@ -40,59 +40,8 @@ inline std::ostream& operator<<(std::ostream& stream, const lady::Vector2& v)
 	return stream;
 }
 
-void print(int i)
-{
-	cout << i << endl;
-}
-
-int add(int i1, int i2)
-{
-	return i1 + i2;
-}
-
-int sub(int i1, int i2)
-{
-	return i1 - i2;
-}
-
-class A
-{
-public:
-	int add(int i1, int i2)
-	{
-		return i1 + i2;
-	}
-};
-
-union Data
-{
-	int i;
-	bool b;
-	char c[6];
-};
-
 int main(int argc, char* argv[])
 {
-	Data data;
-	data.i = 0;
-	cout << data.b << endl;
-
-	void (*func_ptr)(int) = &print;
-	func_ptr(5);
-
-	int (*op_ptr)(int, int);
-	op_ptr = add;
-	
-	cout << op_ptr(4, 4) << endl;
-
-	std::function<int(int, int)> op;
-	op = add;
-	cout << op(5, 6) << endl;
-
-	A a;
-	op = std::bind(&A::add, &a, std::placeholders::_1, std::placeholders::_2);
-	cout << op(6, 6) << endl;
-
 	INFO_LOG("program is running");
 
 	lady::MemoryTracker::Initialize();
@@ -149,6 +98,7 @@ int main(int argc, char* argv[])
 		
 		
 		lady::g_particleSystem.Update(lady::g_time.GetDeltaTime());
+		lady::PhysicsSystem::Instance().Update(lady::g_time.GetDeltaTime());
 		lady::g_renderer.SetColor(0, 0, 0, 0);
 
 		lady::g_renderer.BeginFrame();

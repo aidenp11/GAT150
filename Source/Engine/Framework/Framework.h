@@ -15,6 +15,8 @@
 #include "Components/SpriteComponent.h"
 #include "Components/CollisionComponent.h"
 #include "Components/CircleCollisionComponent.h"
+#include "Components/BoxPhysicsComponent.h"
+#include "Components/BoxCollisionComponent.h"
 
 #include "Resource/Resource.h"
 #include "Resource/ResourceManager.h"

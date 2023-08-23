@@ -7,6 +7,8 @@
 #define READ_DATA_REQUIRED(value, data) lady::Json::Read(value, #data, data, true)
 #define HAS_DATA(value, data) value.HasMember(#data)
 #define GET_DATA(value, data) value[#data]
+#define READ_NAME_DATA(value, name, data) lady::Json::Read(value, name, data)
+#define READ_NAME_DATA_REQUIRED(value, name, data) lady::Json::Read(value, name, data, true)
 
 namespace lady
 {
