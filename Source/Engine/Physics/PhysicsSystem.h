@@ -1,4 +1,5 @@
 #pragma once
+#include "ContactListener.h"
 #include "Framework/Singleton.h"
 #include "box2d/include/box2d/b2_world.h"
 #include "box2d/include/box2d/box2d.h"
@@ -53,5 +54,6 @@ namespace lady
 		float m_pixelsPerUnit = 48.0f;
 
 		std::unique_ptr<b2World> m_world;
+		std::unique_ptr<ContactListener> m_contactListener;
 	};
 }

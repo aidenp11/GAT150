@@ -1,5 +1,5 @@
 {
-	"actors":[
+	"actors": [
 		{
 			"type": "Actor",
 			"name": "Background",
@@ -12,7 +12,7 @@
 			"components": [
 				{
 					"type": "SpriteComponent",
-					"textureName": "spacebackground.png"
+					"textureName": "Textures/spacebackground.png"
 
 				}
 			]
@@ -28,16 +28,24 @@
 				"scale": 1,
 				"rotation": 0
 			},
-			"speed": 400,
+			"speed": 10,
 			"components": [
 				{
 					"type": "SpriteComponent",
-					"textureName": "rocket.png"
+					"textureName": "Textures/rocket.png"
 
 				},
 				{
-					"type": "CircleCollisionComponent"
-				}
+					"type": "BoxPhysicsComponent",
+					"damping": 0.98,
+					"angularDamping": 2,
+					"gravityScale":  0
+					},
+					{
+					"type": "BoxCollisionComponent",
+					"size":  [32, 32]
+					}
+
 			]
 		},
 		{
@@ -50,23 +58,13 @@
 				"rotation": 0
 			},
 			"components": [
-        {
-          "type": "TextRenderComponent",
-          "fontName": "BodoniFLF-Bold.ttf",
-          "fontSize": 24,
-          "text": "SPACE GAME"
-        }
+				{
+					"type": "TextRenderComponent",
+					"fontName": "BodoniFLF-Bold.ttf",
+					"fontSize": 24,
+					"text": "SPACE GAME"
+				}
 			]
-		}//,
-		//{
-		//	"type": "BoxPhysicsComponent",
-		//	"damping": 0.98,
-		//	"angularDamping": 2,
-		//	"gravityScale":  0
-		//},
-		//{
-		//	"type": "BoxCollisionComponent",
-		//	"size":  [32, 32]
-		//}
+		} 
 	]
 }

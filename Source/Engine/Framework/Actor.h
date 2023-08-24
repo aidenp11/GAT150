@@ -34,7 +34,7 @@ namespace lady
 
 		float GetRadius() { return 7.5f; }
 
-		virtual void OnCollision(Actor* other) {}
+		virtual void OnCollisionEnter(Actor* other) {}
 
 		class Scene* m_scene = nullptr;
 

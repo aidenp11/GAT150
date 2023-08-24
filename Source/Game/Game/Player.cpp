@@ -40,7 +40,7 @@ void Player::Update(float dt)
 	if (lady::g_inputSystem.GetKeyDown(SDL_SCANCODE_W)) thrust = 1;
 
 	lady::vec2 forward = lady::vec2{ 0, -1 }.Rotate(transformg.rotation);
-	transformg.position += forward * m_speed * thrust * lady::g_time.GetDeltaTime();
+	//transformg.position += forward * m_speed * thrust * lady::g_time.GetDeltaTime();
 	transformg.position.x = lady::Wrap(transformg.position.x, (float)lady::g_renderer.GetWidth());
 	transformg.position.y = lady::Wrap(transformg.position.y, (float)lady::g_renderer.GetHeight());
 
@@ -70,7 +70,7 @@ void Player::Update(float dt)
 	}
 }
 
-void Player::OnCollision(Actor* other)
+void Player::OnCollisionEnter(Actor* other)
 {
 	
 		if (other->tag == "EnemyBullet")

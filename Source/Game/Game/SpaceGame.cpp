@@ -18,12 +18,12 @@ bool SpaceGame::Initialize()
 	//m_titleText = std::make_unique<kiko::Text>(font);
 	m_gameOverText = std::make_unique<lady::Text>(font);
 	
-	lady::g_audioSystem.AddAudio("hit", "Laser_Shoot.wav");
-	lady::g_audioSystem.AddAudio("explosion", "Explosion.wav");
-	lady::g_audioSystem.AddAudio("music", "spacesong.wav");
+	lady::g_audioSystem.AddAudio("hit", "Audio/Laser_Shoot.wav");
+	lady::g_audioSystem.AddAudio("explosion", "Audio/Explosion.wav");
+	lady::g_audioSystem.AddAudio("music", "Audio/spacesong.wav");
 
 	m_scene = std::make_unique<lady::Scene>();
-	m_scene->Load("scene.json");
+	m_scene->Load("spacescene.json");
 	m_scene->Initialize();
 
 	m_scoreText->Create(lady::g_renderer, "SCORE: 00000", lady::Color{ 0, 0, 0, 0 } );
@@ -70,7 +70,7 @@ void SpaceGame::Update(float dt)
 		// auto spriteComponent = CREATE_CLASS(SpriteComponent)
 
 		std::unique_ptr<lady::SpriteComponent> component = std::make_unique<lady::SpriteComponent>();
-		component->m_texture = GET_RESOURCE(lady::Texture, "playership.png", lady::g_renderer);
+		component->m_texture = GET_RESOURCE(lady::Texture, "Textures/playership.png", lady::g_renderer);
 		player->AddComponent(std::move(component));
 
 		auto physicsComponent = std::make_unique<lady::EnginePhysicsComponet>();
@@ -97,7 +97,7 @@ void SpaceGame::Update(float dt)
 			enemy->m_game = this;
 
 			std::unique_ptr<lady::SpriteComponent> component = std::make_unique<lady::SpriteComponent>();
-			component->m_texture = GET_RESOURCE(lady::Texture, "enemyship.png", lady::g_renderer);
+			component->m_texture = GET_RESOURCE(lady::Texture, "Textures/enemyship.png", lady::g_renderer);
 			enemy->AddComponent(std::move(component));
 
 			auto collisionComponent = std::make_unique<lady::CircleCollisionComponent>();

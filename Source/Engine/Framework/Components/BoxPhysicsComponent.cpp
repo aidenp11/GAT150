@@ -44,6 +44,11 @@ namespace lady
 		m_body->ApplyTorque(torque, true);
 	}
 
+	void BoxPhysicsComponent::SetVelocity(const vec2& velocity)
+	{
+
+	}
+
 	void BoxPhysicsComponent::Read(const json_t& value)
 	{
 		READ_NAME_DATA(value, "damping", data.damping);

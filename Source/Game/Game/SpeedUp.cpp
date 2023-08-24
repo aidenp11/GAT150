@@ -20,7 +20,7 @@ void SpeedUp::Update(float dt)
 	transformg.position.y = lady::Wrap(transformg.position.y, (float)lady::g_renderer.GetHeight());
 }
 
-void SpeedUp::OnCollision(Actor* other)
+void SpeedUp::OnCollisionEnter(Actor* other)
 {
 	if (other->tag == "PlayerBullet")
 	{

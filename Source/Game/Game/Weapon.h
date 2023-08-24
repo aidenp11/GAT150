@@ -1,5 +1,6 @@
 #pragma once
 #include "Framework/Actor.h"
+#include "Framework/Components/PhysicsComponent.h"
 
 namespace lady
 {
@@ -11,13 +12,14 @@ namespace lady
 
 		bool Initialize() override;
 		void Update(float dt) override;
-		void OnCollision(Actor* other);
+		void OnCollisionEnter(Actor* other);
 
 	private:
 		float speed = 0;
 	public:
 
 		Weapon() = default;
+		lady::PhysicsComponent* m_physicsComponent = nullptr;
 	};
 }
 

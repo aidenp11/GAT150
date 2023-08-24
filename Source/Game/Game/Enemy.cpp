@@ -53,7 +53,7 @@ void Enemy::Update(float dt)
 	}*/
 }
 
-void Enemy::OnCollision(Actor* other)
+void Enemy::OnCollisionEnter(Actor* other)
 {
 	if (other->tag == "PlayerBullet")
 	{
