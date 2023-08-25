@@ -155,6 +155,7 @@
     <ClInclude Include="FileIO.h" />
     <ClInclude Include="json.h" />
     <ClInclude Include="Logger.h" />
+    <ClInclude Include="Rect.h" />
     <ClInclude Include="MathUtils.h" />
     <ClInclude Include="Matrix22.h" />
     <ClInclude Include="Matrix33.h" />

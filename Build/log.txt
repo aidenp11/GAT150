@@ -5,6 +5,7 @@ INFO: Factory.h(71) Class registered: EnginePhysicsComponet
 INFO: Factory.h(71) Class registered: CircleCollisionComponent
 INFO: Factory.h(71) Class registered: BoxPhysicsComponent
 INFO: Factory.h(71) Class registered: BoxCollisionComponent
+INFO: Factory.h(71) Class registered: AnimComponent
 INFO: Factory.h(71) Class registered: Actor
 INFO: main.cpp(19) program is running
 INFO: EventManager.cpp(18) Event subscribed: AddPoint

@@ -60,7 +60,7 @@
 			"components": [
 				{
 					"type": "TextRenderComponent",
-					"fontName": "BodoniFLF-Bold.ttf",
+					"fontName": "Fonts/BodoniFLF-Bold.ttf",
 					"fontSize": 24,
 					"text": "SPACE GAME"
 				}

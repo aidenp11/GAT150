@@ -13,10 +13,55 @@
 				{
 					"type": "SpriteComponent",
 					"textureName": "Textures/fungamebackground.png"
-
+				}
+			]
+		},
+		{
+			"type": "Actor",
+			"name": "Coin",
+			"persistent": true,
+			"transform": {
+				"position": [ 400, 350 ],
+				"scale": 1,
+				"rotation": 0
+			},
+			"components": [
+				{
+					"type": "AnimComponent",
+					"defaultSequence": "idle",
+					"sequences": [
+						{
+							"name": "idle",
+							"fps": 12,
+							"numColumns": 8,
+							"numRows": 1,
+							"startFrame": 1,
+							"endFrame": 8,
+							"textureName": "Textures/coin.png"
+						}
+					]
+				}
+			]
+		},
+		{
+			"type": "Actor",
+			"name": "Title",
+			"persistent": true,
+			"transform": {
+				"position": [ 400, 300 ],
+				"scale": 2,
+				"rotation": 0
+			},
+			"components": [
+				{
+					"type": "TextRenderComponent",
+					"fontName": "Fonts/BodoniFLF-Bold.ttf",
+					"fontSize": 24,
+					"text": "PLATFORMER GAME",
+					"color": [ 0.9, 0.1, 0.5, 1 ]
 				}
 			]
 		}
-		 
+
 	]
 }

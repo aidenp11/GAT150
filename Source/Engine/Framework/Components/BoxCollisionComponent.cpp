@@ -1,5 +1,6 @@
 #include "BoxCollisionComponent.h"
 #include "BoxPhysicsComponent.h"
+#include "SpriteComponent.h"
 #include "Framework/Actor.h"
 
 namespace lady
@@ -11,6 +12,15 @@ namespace lady
 		auto component = m_owner->GetComponent<BoxPhysicsComponent>();
 		if (component)
 		{
+			if (data.size.x == 0 && data.size.y == 0)
+			{
+				auto spriteComponent = m_owner->GetComponent<SpriteComponent>();
+				if (spriteComponent)
+				{
+					data.size = vec2{ spriteComponent->source.w, spriteComponent->source.h };
+				}
+			}
+
 			data.size = data.size * scaleOffset * m_owner->transformg.scale;
 
 			if (component->m_body->GetType() == b2_staticBody)

@@ -66,7 +66,7 @@ void FunGame::Update(float dt)
 		break;
 	}
 
-
+	m_scene->Update(dt);
 }
 
 void FunGame::Draw(lady::Renderer& renderer)
