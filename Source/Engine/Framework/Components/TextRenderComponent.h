@@ -18,7 +18,7 @@ namespace lady
 		std::string text;
 		std::string fontName;
 		int fontSize = 0;
-		Color color;
+		Color color{ 1, 1, 1, 1 };
 		Rect rect;
 
 	private:

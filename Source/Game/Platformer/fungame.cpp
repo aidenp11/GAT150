@@ -31,24 +31,18 @@ void FunGame::Update(float dt)
 	switch (m_state)
 	{
 	case FunGame::eState::Title:
-		if (lady::g_inputSystem.GetKeyDown(SDL_SCANCODE_SPACE) &&
-			!lady::g_inputSystem.GetPreviousKeyDown(SDL_SCANCODE_SPACE))
-		{
-			m_state = eState::StartGame;
-		}
+	{
+		/*auto actor = INSTANTIATE(Actor, "Crate");
+		actor->transformg.position = { lady::randomf(lady::g_renderer.GetWidth(), 100) };
+		actor->Initialize();
+		m_scene->Add(std::move(actor));*/
+	}
 		break;
 	case FunGame::eState::StartGame:
 
 
 		break;
 	case FunGame::eState::StartLevel:
-	
-
-
-
-
-
-
 	
 	break;
 	case FunGame::eState::Game:

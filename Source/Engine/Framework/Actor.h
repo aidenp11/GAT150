@@ -19,6 +19,9 @@ namespace lady
 		{}
 
 		Actor(const Actor& other);
+		virtual ~Actor() {
+			OnDestroy();
+		}
 
 		virtual bool Initialize() override;
 		virtual void OnDestroy() override;
@@ -35,6 +38,7 @@ namespace lady
 		float GetRadius() { return 7.5f; }
 
 		virtual void OnCollisionEnter(Actor* other) {}
+		virtual void OnCollisionExit(Actor* other) {}
 
 		class Scene* m_scene = nullptr;
 
