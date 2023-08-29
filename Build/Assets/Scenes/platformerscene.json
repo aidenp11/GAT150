@@ -21,7 +21,7 @@
 			"name": "Coin",
 			"persistent": true,
 			"transform": {
-				"position": [ 400, 350 ],
+				"position": [ 400, 150 ],
 				"scale": 1,
 				"rotation": 0
 			},
@@ -80,17 +80,16 @@
 			"name": "Player",
 			"tag": "Player",
 			"persistent": true,
-			"speed": 15,
-			"jump": 15,
+			"speed": 25,
+			"jump": 11,
 			"transform": {
-				"position": [ 450, 350 ],
-				"scale": 1.5,
-				"speed": 0
+				"position": [ 450, 450 ],
+				"scale": 1.5
 			},
 			"components": [
 				{
 					"type": "AnimComponent",
-					"defaultSequenceName": "run",
+					"defaultSequenceName": "idle",
 					"sequences": [
 						{
 							"name": "idle",
@@ -107,7 +106,7 @@
 							"numColumns": 6,
 							"numRows": 1,
 							"startFrame": 1,
-							"endFrame": 6,
+							"endFrame": 4,
 							"textureName": "Textures/run.png"
 						}
 
@@ -115,11 +114,11 @@
 				},
 				{
 					"type": "BoxPhysicsComponent",
-					"constrainAngle": true
+					"constrainAngle": true,
+					"gravityScale":  2
 				},
 				{
-					"type": "BoxCollisionComponent",
-					"restitution": 0.1
+					"type": "BoxCollisionComponent"
 				}
 			]
 		},
@@ -128,7 +127,7 @@
 			"name": "Enemy",
 			"tag": "Enemy",
 			"persistent": true,
-			"speed": 15,
+			"speed": 1,
 			"transform": {
 				"position": [ 450, 150 ],
 				"scale": 1.5,
@@ -153,11 +152,13 @@
 				{
 					"type": "BoxPhysicsComponent",
 					"gravityScale":  0,
-					"constrainAngle": true
+					"constrainAngle": true,
+					"damping":  0.5
 				},
 				{
 					"type": "BoxCollisionComponent",
-					"restitution": 0
+					"restitution": 0.1,
+					"isTrigger":  true
 				}
 			]
 		},

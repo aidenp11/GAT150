@@ -13,6 +13,7 @@ namespace lady
 		Actor::Initialize();
 
 		m_physicsComponent = GetComponent<PhysicsComponent>();
+		m_animComponent = GetComponent<AnimComponent>();
 
 		return true;
 	}
@@ -20,6 +21,8 @@ namespace lady
 	void Player::Update(float dt)
 	{
 		Actor::Update(dt);
+
+		bool onGround = (groundCount > 0);
 
 		float dir = 0;
 		if (g_inputSystem.GetKeyDown(SDL_SCANCODE_A)) dir = -1;
@@ -29,7 +32,6 @@ namespace lady
 
 		m_physicsComponent->ApplyForce(forward * speed * dir);
 
-		bool onGround = (groundCount > 0);
 
 		if (onGround &&
 			g_inputSystem.GetKeyDown(SDL_SCANCODE_SPACE) &&
@@ -38,17 +40,28 @@ namespace lady
 			vec2 up = vec2{ 0, -1 };
 			m_physicsComponent->SetVelocity(up * jump);
 		}
+
+		vec2 velocity = m_physicsComponent->m_velocity;
+		if (std::fabs(velocity.x) > 0.2f)
+		{
+			m_animComponent->flipH = (velocity.x < -0.1f);
+			m_animComponent->SetSequence("run");
+		}
+		else
+		{
+			m_animComponent->SetSequence("idle");
+		}
 	}
 
 	void Player::OnCollisionEnter(Actor* other)
 	{
-		if (other->tag == "Ground") groundCount++;
+		if (other->tag == "Ground") groundCount = 1;
 		
 	}
 
 	void Player::OnCollisionExit(Actor* other)
 	{
-		if (other->tag != "Ground") groundCount--;
+		if (other->tag != "Ground") groundCount = -1;
 	}
 
 	void Player::Read(const json_t& value)

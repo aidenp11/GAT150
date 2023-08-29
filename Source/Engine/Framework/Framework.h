@@ -17,6 +17,8 @@
 #include "Components/CircleCollisionComponent.h"
 #include "Components/BoxPhysicsComponent.h"
 #include "Components/BoxCollisionComponent.h"
+#include "Components/AnimComponent.h"
+#include "Components/TilemapComponent.h"
 
 #include "Resource/Resource.h"
 #include "Resource/ResourceManager.h"

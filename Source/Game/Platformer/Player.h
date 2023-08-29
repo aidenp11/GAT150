@@ -28,6 +28,7 @@ namespace lady
 		int groundCount = 0;
 
 		lady::PhysicsComponent* m_physicsComponent = nullptr;
+		class AnimComponent* m_animComponent = nullptr;
 	};
 }
 

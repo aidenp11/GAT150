@@ -46,7 +46,7 @@ namespace lady
 
 	void BoxPhysicsComponent::SetVelocity(const vec2& velocity)
 	{
-
+		m_body->SetLinearVelocity(VEC2_TO_B2VEC2(velocity));
 	}
 
 	void BoxPhysicsComponent::Read(const json_t& value)

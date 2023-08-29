@@ -8,6 +8,7 @@ C:\Users\apatrick\source\repos\GAT150\Source\Engine\Framework\Components\ModelRe
 C:\Users\apatrick\source\repos\GAT150\Source\Engine\Framework\Components\PhysicsComponent.cpp
 C:\Users\apatrick\source\repos\GAT150\Source\Engine\Framework\Components\SpriteComponent.cpp
 C:\Users\apatrick\source\repos\GAT150\Source\Engine\Framework\Components\TextRenderComponent.cpp
+C:\Users\apatrick\source\repos\GAT150\Source\Engine\Framework\Components\TilemapComponent.cpp
 C:\Users\apatrick\source\repos\GAT150\Source\Engine\Framework\Emitter.cpp
 C:\Users\apatrick\source\repos\GAT150\Source\Engine\Framework\Event\EventManager.cpp
 C:\Users\apatrick\source\repos\GAT150\Source\Engine\Framework\Object.cpp

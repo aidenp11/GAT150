@@ -13,6 +13,7 @@ bool FunGame::Initialize()
 
 	m_scene = std::make_unique<lady::Scene>();
 	m_scene->Load("Scenes/platformerscene.json");
+	m_scene->Load("Scenes/tilemap.json");
 	m_scene->Initialize();
 
 	lady::EventManager::Instance().Subscribe("AddPoint", this, std::bind(&FunGame::AddPoint, this, std::placeholders::_1));
