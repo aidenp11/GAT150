@@ -49,6 +49,11 @@ namespace lady
 		m_body->SetLinearVelocity(VEC2_TO_B2VEC2(velocity));
 	}
 
+	void BoxPhysicsComponent::SetGravityScale(float scale)
+	{
+		m_body->SetGravityScale(scale);
+	}
+
 	void BoxPhysicsComponent::Read(const json_t& value)
 	{
 		READ_NAME_DATA(value, "damping", data.damping);

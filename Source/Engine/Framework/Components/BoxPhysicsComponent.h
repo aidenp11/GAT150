@@ -19,6 +19,8 @@ namespace lady
 		virtual void ApplyTorque(float torque) override;
 		virtual void SetVelocity(const vec2& velocity) override;
 
+		void SetGravityScale(float scale) override;
+
 		friend class BoxCollisionComponent;
 
 	private:

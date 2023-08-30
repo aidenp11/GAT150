@@ -24,6 +24,7 @@ namespace lady
 
 	private:
 		float speed = 0;
+		float maxSpeed = 0;
 		float jump = 0;
 		int groundCount = 0;
 

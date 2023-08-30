@@ -80,16 +80,19 @@
 			"name": "Player",
 			"tag": "Player",
 			"persistent": true,
-			"speed": 25,
-			"jump": 11,
+			"speed": 40,
+			"maxSpeed":  8,
+			"jump": 7,
 			"transform": {
 				"position": [ 450, 450 ],
-				"scale": 1.5
+				"scale": 1.3
 			},
 			"components": [
 				{
 					"type": "AnimComponent",
 					"defaultSequenceName": "idle",
+					"source": [0, 0, 15, 25],
+					"origin":  [0.5, 1],
 					"sequences": [
 						{
 							"name": "idle",
@@ -118,7 +121,8 @@
 					"gravityScale":  2
 				},
 				{
-					"type": "BoxCollisionComponent"
+					"type": "BoxCollisionComponent",
+					"restituion":  0 
 				}
 			]
 		},
@@ -178,26 +182,6 @@
 					"fontSize": 24,
 					"text": "PLATFORMER GAME",
 					"color": [ 0.9, 0.1, 0.5, 1 ]
-				}
-			]
-		},
-		{
-			"type": "Actor",
-			"tag": "Ground",
-			"transform": {
-				"position": [
-					400,
-					520
-				]
-			},
-			"components": [
-				{
-					"type": "BoxPhysicsComponent",
-					"isDynamic": false
-				},
-				{
-					"type": "BoxCollisionComponent",
-					"size": [ 600, 20 ]
 				}
 			]
 		}

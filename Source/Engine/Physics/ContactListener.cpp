@@ -34,8 +34,8 @@ namespace lady
 
 			if (actorA->m_destroyed || actorB->m_destroyed) return;
 
-		//	actorA->OnCollisionExit(actorB);
-		//	actorB->OnCollisionExit(actorA);
+			actorA->OnCollisionExit(actorB);
+			actorB->OnCollisionExit(actorA);
 		}
 	}
 }

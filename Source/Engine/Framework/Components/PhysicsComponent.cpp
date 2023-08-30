@@ -6,4 +6,8 @@ namespace lady
 	{
 
 	}
+
+	void PhysicsComponent::SetGravityScale(float scale)
+	{
+	}
 }

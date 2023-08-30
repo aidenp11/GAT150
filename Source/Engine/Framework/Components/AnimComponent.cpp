@@ -11,8 +11,11 @@ namespace lady
 		{
 		SpriteComponent::Initialize();
 
-		SetSequence(defaultSequenceName);
+		SetSequence(defaultSequenceName, false);
+		if (source.w == 0 && source.h == 0)
+		{
 		UpdateSource();
+		}
 
 		return true;
 		}
@@ -33,7 +36,7 @@ namespace lady
 			}
 		}
 
-		void AnimComponent::SetSequence(const std::string& name)
+		void AnimComponent::SetSequence(const std::string& name, bool update)
 		{
 			//prevent set sequence again
 			if (m_sequence && m_sequence->name == name) return;
@@ -49,6 +52,8 @@ namespace lady
 				//reset frame information
 				frame = m_sequence->startFrame;
 				frameTimer = 1.0f / m_sequence->fps;
+
+				UpdateSource();
 			}
 		}
 
