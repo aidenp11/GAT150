@@ -24,10 +24,10 @@ namespace lady
 		int GetLives() const { return m_lives; }
 		void SetLives(int lives) { m_lives = lives; }
 
+		int m_score = 0;
 	protected:
 		std::unique_ptr<Scene> m_scene;
 
-		int m_score = 0;
 		int m_lives = 0;
 
 	};

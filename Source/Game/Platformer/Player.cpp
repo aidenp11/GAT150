@@ -46,6 +46,7 @@ namespace lady
 		{
 			vec2 up = vec2{ 0, -1 };
 			m_physicsComponent->SetVelocity(velocity + (up * jump));
+			g_audioSystem.PlayOneShot("jump", false);
 		}
 
 		//if (velocity.y > 0) m_physicsComponent->SetGravityScale(3);
@@ -66,6 +67,15 @@ namespace lady
 	{
 		if (other->tag == "Ground") 
 			groundCount++;
+
+		if (other->tag == "Enemy")
+ 			health--;
+
+		if (health <= 0)
+		{
+			m_destroyed = true;
+			EventManager::Instance().DispatchEvent("OnPlayerDead", 0);
+		}
 		
 	}
 
@@ -82,6 +92,7 @@ namespace lady
 			READ_DATA(value, speed);
 			READ_DATA(value, maxSpeed);
 			READ_DATA(value, jump);
+			READ_DATA(value, health);
 		}
 }
 

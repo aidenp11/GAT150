@@ -13,6 +13,7 @@ namespace lady
 			Player(float speed, float jump, float health, const lady::Transform& transform) :
 			Actor{ transform },
 			speed{ speed },
+			health{ health },
 			jump{ jump }
 		{}
 
@@ -27,6 +28,7 @@ namespace lady
 		float maxSpeed = 0;
 		float jump = 0;
 		int groundCount = 0;
+		float health = 0;
 
 		lady::PhysicsComponent* m_physicsComponent = nullptr;
 		class AnimComponent* m_animComponent = nullptr;

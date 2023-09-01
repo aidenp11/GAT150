@@ -136,6 +136,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <None Include="..\..\..\Build\Assets\Scenes\platformerscene.json" />
+    <None Include="..\..\..\Build\Assets\Scenes\startgame.json" />
     <None Include="..\..\..\Build\Assets\Scenes\tilemap.json" />
   </ItemGroup>
   <ItemGroup>

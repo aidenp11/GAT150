@@ -11,8 +11,218 @@ INFO: Factory.h(71) Class registered: BoxCollisionComponent
 INFO: Factory.h(71) Class registered: AnimComponent
 INFO: Factory.h(71) Class registered: Actor
 INFO: main.cpp(19) program is running
-INFO: Factory.h(79) Prototype Class registered: Crate
 INFO: Factory.h(79) Prototype Class registered: tile01
 INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
+INFO: EventManager.cpp(18) Event subscribed: AddPoint
+INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead
+INFO: Factory.h(79) Prototype Class registered: tile01
+INFO: Factory.h(79) Prototype Class registered: tile02
+INFO: Factory.h(79) Prototype Class registered: Crate
 INFO: EventManager.cpp(18) Event subscribed: AddPoint
 INFO: EventManager.cpp(18) Event subscribed: OnPlayerDead

@@ -54,7 +54,7 @@ int main(int argc, char* argv[])
 		if (lady::g_inputSystem.GetKeyDown(SDL_SCANCODE_SPACE) &&
 			!lady::g_inputSystem.GetPreviousKeyDown(SDL_SCANCODE_SPACE))
 		{
-			lady::g_audioSystem.PlayOneShot("hit", false);
+			
 		}
 
 
